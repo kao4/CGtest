@@ -1,0 +1,110 @@
+columnSuffix: null
+handle: workSpace
+instructions: null
+name: works作業領域
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Planning
+        -
+          - value
+          - planning
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Web Direction'
+        -
+          - value
+          - webDirection
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Web Design'
+        -
+          - value
+          - 'Web Design'
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Web Development'
+        -
+          - value
+          - 'Web Development'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Photograph
+        -
+          - value
+          - photograph
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Videograph
+        -
+          - value
+          - videograph
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Graphic Design'
+        -
+          - value
+          - graphicDesign
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Copywriting
+        -
+          - value
+          - copywriting
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Illustration
+        -
+          - value
+          - illustration
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\MultiSelect

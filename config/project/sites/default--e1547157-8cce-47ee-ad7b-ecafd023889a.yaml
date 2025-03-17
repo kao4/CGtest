@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: JA
+name: CGtest
+primary: true
+siteGroup: bffa93b7-d62e-412f-be4a-661c30b74b33 # CGtest
+sortOrder: 1

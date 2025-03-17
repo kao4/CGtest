@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: df661a93-b36d-4097-b71a-954549e12cbb # Works Entry
+handle: worksEntry
+maxAuthors: 1
+name: 'Works -Entry'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - プライマリのエントリページ
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  e1547157-8cce-47ee-ad7b-ecafd023889a: # CGtest
+    enabledByDefault: true
+    hasUrls: true
+    template: works/index.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: e6fbcb61-8cad-49aa-8fef-8f4b68c82cc3
+type: structure

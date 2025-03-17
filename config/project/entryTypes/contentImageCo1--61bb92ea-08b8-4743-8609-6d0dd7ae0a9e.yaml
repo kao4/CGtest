@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  04e8ed20-f7c4-4377-9fd5-ed38220c60c7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-17T03:56:45+00:00'
+            elementCondition: null
+            fieldUid: 414a1587-bd39-4972-9592-f796508591ad # work画像１枚
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ecd53b5a-047f-4f55-b67b-4fb856ac2534
+            userCondition: null
+            warning: null
+            width: 100
+        name: コンテンツ
+        uid: bf18aabc-c6fc-47f9-b716-ab097883d90f
+        userCondition: null
+handle: contentImageCo1
+hasTitleField: false
+icon: null
+name: 1カラム画像
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

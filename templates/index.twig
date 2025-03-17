@@ -5,80 +5,150 @@
     <meta charset="utf-8" />
     <title>CG__Works-entry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
 </head>
 <body>
-    <section class="work__hero">
-		<div class="work__hero-wrapper">
-        <picture>
-            <source media="(max-width: 960px)" srcset="" type="image/webp">
-            <img class="hero-img" src="/images/mate_top@2x.webp" width="1440" height="1024" alt="">
-		</picture>
-		</div>
-	</section>
-    <section class="work__contents">
-        <div class="work__contents">
+    {% set workEntries = craft.entries()
+        .section('WorksEntry')
+        .type('worksEntry')
+        .all() %}
+    {% for entry in workEntries %}  
+        <section class="work__hero"> 
+            <div class="work__hero-wrapper">
+                {% if entry.workTopImage is not empty %}
+                    <picture>
+                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                        <img class="hero-img" src="{{ entry.workTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                    </picture>
+                {% endif %}
+            </div>  
+        </section>
+        <section class="work__contents">
             <div class="work__heading">
-                <h1 class="work__title">MATE.BIKE NO 違法改造, NO 危険運転 Special site</h1>
+                <h1 class="work__title">
+                    {% for line in entry.title | split('|') %}
+                        {{ line }}{% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
+                </h1>
                 <div class="work__info">
-                    <div class="work__summary">
-                        法令を遵守しつつ、楽しみながら、人と地球に優しい選択をするe-BIKEを正しく活用するために、ユーザーの皆様に向けた特設サイトの制作をお手伝いさせていただきました。
-                    </div>
-                    <a href="" class="work__detail">
-                        Visit Site
-                        <img src="/images/visit-site__arrow.svg" alt="work詳細ページへ">
-                    </a>
-                    <div class="work__year">2024</div>
-                    <div class="work__client">Client：MATE.BIKE</div>
-                    <div class="work__space">
-                        Web Design<br>
-                        Web Development
+                    <div class="work__summary">{{ entry.workSummary }}</div>
+                    <div class="work__details">
+                        <div class="work__detail__site">
+                            <a href="" class="work__detail__site-link">
+                                Visit Site
+                                <img src="/images/visit-site__arrow.svg" alt="work詳細ページへ">
+                            </a>
+                        </div>
+                        <div class="work__detail__space">
+                            <p class="work__year">{{ entry.workYear }}</p>
+                            <p class="work__client">Client：{{ entry.workClient }}</p>
+                            <p>{{ entry.workSpace | join('<br>') | raw }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="work__body">
+            {# {% for workContent in entry.workContent.all() %} #}
                 <div class="work__hero-wrapper">
+                    {# {% if workContent.workImage1col is not empty %} #}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="work__body-top-img" src="/images/mate01@2x.webp" width="919" height="654" alt="">
+                        <img class="work__body-top-img" src="" width="919" height="654" alt="">
                     </picture>
-                    <div class="work__slide-wrapper">
-                        <picture>
-                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
-                        </picture>
-                        <picture>
-                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
-                        </picture>
-                        <picture>
-                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
-                        </picture>
+                    {# {% endif %} #}
+                    <div class="splide" aria-label="works__slide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="next-page-link__sub">
+                    <div class="next-page__link__sub">
                         <a href="" class="next-page">
-                            <img class="next-page__img-small" src="/images/next__small@2x.webp" width="330" height="234" alt="">
-                            <h2 class="next-page-link__sub__title">Next</h2>
-                            <span>Codegraph Namecard</span>
-                            <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                            <img class="next-page__img" src="/images/next__small@2x.webp" width="330" height="234" alt="">
+                            <div class="next-page__nav">
+                                <h2 class="next-page__link__sub__title">Next</h2>
+                                <span>Codegraph Namecard</span>
+                                <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                            </div>
                         </a>
                     </div>
-		        </div>
+                </div>
+            {# {% endfor %} #}
             </div>
-        </div>
-    </section>
-    <section class="next-page-link">
-        <a href="" class="next-page">
-            <picture>
-                <source media="(max-width: 960px)" srcset="" type="image/webp">
-                <img class="next-page__img-small" src="/images/next__small@2x.webp" width="1440" height="1024" alt="">
-            </picture>
-            <h2 class="next-page-link__sub__title">Next</h2>
-            <span>Codegraph Namecard redesign</span>
-            <img src="/images/next-page__arrow.svg" alt="nextページへ">
-        </a>
-    </section>
+        </section>
+    
+        <section class="next-page__link">
+            <a href="" class="next-page">
+                <img class="next-page__img" src="/images/next__small@2x.webp" width="1440" height="1024" alt="">
+                <div class="next-page__nav">
+                    <h2 class="next-page__link__sub__title">Next</h2>
+                    <span>Codegraph Namecard</span>
+                    <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                </div>
+            </a>
+        </section>
+    {% endfor %}  
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var splide = new Splide('.splide', {
+                type: 'loop',  // loopの代わりにslideを使用
+                perPage: 2,
+                gap: '1.5rem',
+                padding: { left: '16rem', right: '16rem' },
+                arrows: false,
+                pagination: false,
+                autoplay: 'play',
+                height: '649px', 
+                interval: 3000,    // スライド間隔（ミリ秒）
+                pauseOnHover: false, // ホバー時に停止しない
+                pauseOnFocus: false, // フォーカス時に停止しない
+                resetProgress: false,
+            });
+            splide.mount();
+        });
+    </script>
 </body>
 </html>

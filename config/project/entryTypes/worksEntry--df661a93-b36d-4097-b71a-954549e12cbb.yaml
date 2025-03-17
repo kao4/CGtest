@@ -1,0 +1,157 @@
+color: null
+fieldLayouts:
+  7f528141-6957-4f86-b94c-d5ed531a18d7:
+    cardView:
+      - id
+      - slug
+      - dateCreated
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-17T04:14:22+00:00'
+            elementCondition: null
+            fieldUid: 8a6d1f5e-9c85-44b2-a454-d4906858e36c # workTOP画像
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d38b64a8-3532-46dd-a5dc-3d03063ca3ea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-17T04:05:44+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 960f2323-913e-4f23-88c7-9dc3ae1bee89
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T04:14:22+00:00'
+            elementCondition: null
+            fieldUid: dab1d1ad-6698-4403-a8d7-5eab5fc3ea28 # work概要
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 754fcfae-6760-4762-a1dd-3faa42db0b8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T04:14:22+00:00'
+            elementCondition: null
+            fieldUid: 04546a57-f2f5-462c-93ad-04dba5962df5 # work公開年
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9696d0b2-70c2-4fd7-a41e-6e74da803120
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T04:14:22+00:00'
+            elementCondition: null
+            fieldUid: 81ba1093-a582-4e79-a6ed-2be54a743712 # workクライアント
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3adf988d-e1cd-4e27-9647-102a2f1a04be
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-17T07:45:19+00:00'
+            elementCondition: null
+            fieldUid: 2a1d939d-8dd8-41f9-ba38-c92b3e2bacb2 # works作業領域
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 684dabbe-4100-4d39-ac6e-9d65f2e8aed0
+            userCondition: null
+            warning: null
+            width: 100
+        name: コンテンツ
+        uid: 8e003d1f-c464-4679-8b4e-642384215822
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-17T04:14:22+00:00'
+            elementCondition: null
+            fieldUid: f42b1497-cd88-4002-9a50-77a35f41cc0e # workコンテンツ
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8609c98a-4a62-4b2b-8dbd-d9de26b1e8e1
+            userCondition: null
+            warning: null
+            width: 100
+        name: 自由コンテンツ
+        uid: d0ddd100-7584-45ed-b793-5f297c2a5141
+        userCondition: null
+handle: worksEntry
+hasTitleField: true
+icon: null
+name: 'Works Entry'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

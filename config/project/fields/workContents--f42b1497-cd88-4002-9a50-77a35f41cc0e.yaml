@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: workContents
+instructions: null
+name: workコンテンツ
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 61bb92ea-08b8-4743-8609-6d0dd7ae0a9e # 1カラム画像
+    -
+      __assoc__:
+        -
+          - uid
+          - 87a68457-070e-40c1-bc4f-fdaac0a48fb6 # スライド画像
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: true
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

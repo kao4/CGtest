@@ -1,0 +1,50 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
+fieldLayouts:
+  92563543-7016-4c5d-b6f8-b18323066cf0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-03-17T05:30:44+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 5c4f6ed7-ad97-4fc8-8c5d-ce5934e762f3
+            userCondition: null
+            warning: null
+            width: 100
+        name: コンテンツ
+        uid: f463925d-ea61-422f-9d4c-4cdcbd6c6b8f
+        userCondition: null
+fs: uploads
+handle: work
+name: Work
+sortOrder: 1
+subpath: work
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: transform/work
