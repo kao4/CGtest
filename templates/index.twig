@@ -53,57 +53,47 @@
                     </div>
                 </div>
             </div>
-            <div class="work__body">
-            {# {% for workContent in entry.workContent.all() %} #}
+            <div class="work__body">      
+            {% for workContent in entry.workContents.all() %} 
                 <div class="work__hero-wrapper">
-                    {# {% if workContent.workImage1col is not empty %} #}
-                    <picture>
-                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="work__body-top-img" src="" width="919" height="654" alt="">
-                    </picture>
-                    {# {% endif %} #}
-                    <div class="splide" aria-label="works__slide">
+                    {% if workContent.workImage1col is not empty %}
+                        <picture>
+                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                            <img class="work__body-top-img" src="{{ workContent.workImage1col.one().getUrl() }}" width="919" height="654" alt="">
+                        </picture>
+                    {% endif %}
+                    {# <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
                             <ul class="splide__list">
+                            {% if workContent.workSlideImages|length %}
+                                {% for image in workContent.workSlideImages.all() %}
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
+                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
                                     </picture>
                                 </li>
+                                {% endfor %}
+                                {% for image in workContent.workSlideImages.all() %}
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
+                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
                                     </picture>
                                 </li>
+                                {% endfor %}
+                                {% for image in workContent.workSlideImages.all() %}
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
+                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
                                     </picture>
                                 </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
+                                {% endfor %}
+                            {% endif %}
                             </ul>
                         </div>
-                    </div>
+                    </div> #}
                     <div class="next-page__link__sub">
                         <a href="" class="next-page">
                             <img class="next-page__img" src="/images/next__small@2x.webp" width="330" height="234" alt="">
@@ -115,7 +105,7 @@
                         </a>
                     </div>
                 </div>
-            {# {% endfor %} #}
+            {% endfor %}
             </div>
         </section>
     

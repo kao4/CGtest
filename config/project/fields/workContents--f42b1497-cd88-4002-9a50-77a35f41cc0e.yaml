@@ -19,7 +19,7 @@ settings:
           - 87a68457-070e-40c1-bc4f-fdaac0a48fb6 # スライド画像
   includeTableView: false
   maxEntries: null
-  minEntries: null
+  minEntries: 1
   pageSize: null
   propagationKeyFormat: null
   propagationMethod: all

@@ -1,4 +1,4 @@
-dateModified: 1742198723
+dateModified: 1742256654
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
@@ -33,5 +33,6 @@ system:
   edition: solo
   live: true
   name: CGtest
+  retryDuration: null
   schemaVersion: 5.6.0.2
-  timeZone: America/Los_Angeles
+  timeZone: Asia/Tokyo
