@@ -1,11 +1,11 @@
 columnSuffix: null
-handle: workTopImage
+handle: worksContentsImage1
 instructions: null
-name: workTOP画像
-searchable: false
+name: worksコンテンツ画像１枚
+searchable: true
 settings:
   allowSelfRelations: false
-  allowSubfolders: true
+  allowSubfolders: false
   allowUploads: true
   allowedKinds:
     - image
@@ -17,11 +17,11 @@ settings:
   minRelations: 1
   previewMode: full
   restrictFiles: true
-  restrictLocation: true
-  restrictedDefaultUploadSubpath: '{title}'
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
   restrictedLocationSubpath: null
-  selectionLabel: 追加
+  selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false
@@ -29,7 +29,7 @@ settings:
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: list
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\Assets

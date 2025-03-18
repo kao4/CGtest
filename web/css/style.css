@@ -74,15 +74,21 @@ body {
     width: 100%;
     margin-block: 6rem 9rem;
     overflow: hidden;
+    .splide__track {
+      overflow: visible;
+    }
     .splide__list {
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 1.5rem;
     }
     .splide__slide {
       display: block;
       width: 28rem;
       height: 40rem;
+      visibility: visible;
+
       picture {
         display: block;
         width: 100%;

@@ -1,14 +1,14 @@
 columnSuffix: null
-handle: workSummary
+handle: worksYear
 instructions: null
-name: work概要
+name: works公開年
 searchable: true
 settings:
   byteLimit: null
   charLimit: null
   code: false
   initialRows: 4
-  multiline: true
+  multiline: false
   placeholder: null
   uiMode: normal
 translationKeyFormat: null

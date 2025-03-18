@@ -12,7 +12,7 @@ fieldLayouts:
           -
             dateAdded: '2025-03-17T04:14:22+00:00'
             elementCondition: null
-            fieldUid: 8a6d1f5e-9c85-44b2-a454-d4906858e36c # workTOP画像
+            fieldUid: 8a6d1f5e-9c85-44b2-a454-d4906858e36c # worksTOP画像
             handle: null
             includeInCards: false
             instructions: null
@@ -58,7 +58,7 @@ fieldLayouts:
           -
             dateAdded: '2025-03-17T04:14:22+00:00'
             elementCondition: null
-            fieldUid: dab1d1ad-6698-4403-a8d7-5eab5fc3ea28 # work概要
+            fieldUid: dab1d1ad-6698-4403-a8d7-5eab5fc3ea28 # works概要
             handle: null
             includeInCards: false
             instructions: null
@@ -74,7 +74,7 @@ fieldLayouts:
           -
             dateAdded: '2025-03-17T04:14:22+00:00'
             elementCondition: null
-            fieldUid: 04546a57-f2f5-462c-93ad-04dba5962df5 # work公開年
+            fieldUid: 04546a57-f2f5-462c-93ad-04dba5962df5 # works公開年
             handle: null
             includeInCards: false
             instructions: null
@@ -90,7 +90,7 @@ fieldLayouts:
           -
             dateAdded: '2025-03-17T04:14:22+00:00'
             elementCondition: null
-            fieldUid: 81ba1093-a582-4e79-a6ed-2be54a743712 # workクライアント
+            fieldUid: 81ba1093-a582-4e79-a6ed-2be54a743712 # worksクライアント
             handle: null
             includeInCards: false
             instructions: null
@@ -126,9 +126,9 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-17T04:14:22+00:00'
+            dateAdded: '2025-03-18T05:26:58+00:00'
             elementCondition: null
-            fieldUid: f42b1497-cd88-4002-9a50-77a35f41cc0e # workコンテンツ
+            fieldUid: f42b1497-cd88-4002-9a50-77a35f41cc0e # worksコンテンツ
             handle: null
             includeInCards: false
             instructions: null
@@ -137,7 +137,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8609c98a-4a62-4b2b-8dbd-d9de26b1e8e1
+            uid: d2da8d08-2b24-45c1-99c3-8175108615bd
             userCondition: null
             warning: null
             width: 100

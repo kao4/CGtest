@@ -1,27 +1,26 @@
 columnSuffix: null
-handle: workSlideImages02
+handle: worksSlideImages
 instructions: null
-name: workスライド画像02
-searchable: false
+name: worksスライド画像
+searchable: true
 settings:
   allowSelfRelations: false
-  allowSubfolders: true
+  allowSubfolders: false
   allowUploads: true
-  allowedKinds:
-    - image
+  allowedKinds: null
   branchLimit: null
   defaultUploadLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: 5
   minRelations: 1
   previewMode: full
   restrictFiles: false
   restrictLocation: false
-  restrictedDefaultUploadSubpath: '{owner.title}'
+  restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
   restrictedLocationSubpath: null
-  selectionLabel: null
+  selectionLabel: スライドを追加
   showCardsInGrid: false
   showSiteMenu: true
   showUnpermittedFiles: false

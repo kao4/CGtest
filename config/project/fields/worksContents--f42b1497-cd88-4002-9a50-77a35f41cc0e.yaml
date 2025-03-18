@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: workContents
+handle: worksContents
 instructions: null
-name: workコンテンツ
+name: worksコンテンツ
 searchable: false
 settings:
   createButtonLabel: null
@@ -11,22 +11,12 @@ settings:
       __assoc__:
         -
           - uid
-          - 61bb92ea-08b8-4743-8609-6d0dd7ae0a9e # 1カラム画像
+          - 13bc13f8-c9b4-42d9-b39e-66f157aa8554 # worksコンテンツ画像１枚
     -
       __assoc__:
         -
           - uid
-          - 87a68457-070e-40c1-bc4f-fdaac0a48fb6 # スライド画像01
-    -
-      __assoc__:
-        -
-          - uid
-          - cf67f92d-40b1-4976-850f-2913f3d7caba # スライド画像02
-    -
-      __assoc__:
-        -
-          - uid
-          - 5e53861e-12a5-4222-835e-6bcbb8de1a49 # スライド画像03
+          - fa22373c-b2cb-4021-aaad-b1655ebe3179 # worksスライド画像
   includeTableView: false
   maxEntries: null
   minEntries: 1

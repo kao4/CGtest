@@ -1,14 +1,14 @@
 color: null
 fieldLayouts:
-  84b1d8c7-974a-4039-babc-9e8cb8b5d838:
+  8062995d-d52f-4390-9061-dd5ea0a08a8d:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-18T03:07:12+00:00'
+            dateAdded: '2025-03-18T05:26:11+00:00'
             elementCondition: null
-            fieldUid: 7a94b27c-2786-43db-bd7d-e7a5883b52d1 # workスライド画像02
+            fieldUid: 83eb390c-c35e-461d-98ba-7f956701ba81 # worksスライド画像
             handle: null
             includeInCards: false
             instructions: null
@@ -17,17 +17,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 01de0b68-7515-4b76-a034-be874b652d94
+            uid: ca1c4dce-e911-4aac-87c4-acef202d13cc
             userCondition: null
             warning: null
             width: 100
-        name: コンテンツ
-        uid: cb8edc6e-d4a9-4aee-bf64-9499ae1b62b3
+        name: スライド
+        uid: fc94f871-54d4-48c6-baa6-0af12e068862
         userCondition: null
-handle: contentSlideImages02
+handle: worksSlideImages
 hasTitleField: false
 icon: null
-name: スライド画像02
+name: worksスライド画像
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

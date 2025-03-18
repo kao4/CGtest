@@ -1,8 +1,8 @@
 columnSuffix: null
-handle: workTitle
+handle: worksClient
 instructions: null
-name: workタイトル
-searchable: true
+name: worksクライアント
+searchable: false
 settings:
   byteLimit: null
   charLimit: null

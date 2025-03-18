@@ -1,17 +1,17 @@
 {% extends '_layout' %}
 
 {% block content %}
-    {% set workEntries = craft.entries()
+    {% set worksEntries = craft.entries()
         .section('WorksEntry')
         .type('worksEntry')
         .all() %}
-    {% for entry in workEntries %}  
+    {% for entry in worksEntries %}  
         <section class="work__hero"> 
             <div class="work__hero-wrapper">
-                {% if entry.workTopImage is not empty %}
+                {% if entry.worksTopImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="hero-img" src="{{ entry.workTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="hero-img" src="{{ entry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
             </div>  
@@ -24,7 +24,7 @@
                     {% endfor %}
                 </h1>
                 <div class="work__info">
-                    <div class="work__summary">{{ entry.workSummary }}</div>
+                    <div class="work__summary">{{ entry.worksSummary }}</div>
                     <div class="work__details">
                         <div class="work__detail__site">
                             <a href="" class="work__detail__site-link">
@@ -33,92 +33,80 @@
                             </a>
                         </div>
                         <div class="work__detail__space">
-                            <p class="work__year">{{ entry.workYear }}</p>
-                            <p class="work__client">Client：{{ entry.workClient }}</p>
-                            <p>{{ entry.workSpace | join('<br>') | raw }}</p>
+                            <p class="work__year">{{ entry.worksYear }}</p>
+                            <p class="work__client">Client：{{ entry.worksClient }}</p>
+                            <p>{{ entry.worksSpace | join('<br>') | raw }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="work__body">      
-            {% for workContents in entry.workContents.all() %} 
+            {% for worksContents in entry.worksContents.all() %} 
                 <div class="work__hero-wrapper">
-                    {% if workContents.workImage1col is not empty %}
+                    {% if worksContents.worksContentsImage1 is not empty %}
                         <picture>
                             <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__body-top-img" src="{{ workContents.workImage1col.one().getUrl() }}" width="919" height="654" alt="">
+                            <img class="work__body-top-img" src="{{ worksContents.worksContentsImage1.one().getUrl() }}" width="919" height="654" alt="">
                         </picture>
                     {% endif %}
                     <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                {# {% if workContents.workSlideImages01 is not empty %}
+                            {% if worksContents.worksSlideImages is not empty %}
+                                {% set slides = worksContents.worksSlideImages.all() %}
+                                {% if slides[0] is defined %}
                                     <li class="splide__slide">
                                         <picture>
                                             <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ workContents.workSlideImages01.one().getUrl() }}" width="447" height="649" alt="">
+                                            <img class="work__slide" src="{{ slides[0].getUrl() }}" width="447" height="649" alt="">
                                         </picture>
                                     </li>
                                 {% endif %}
-                                {% if workContents.workSlideImages02 is not empty %}
+                                {% if slides[1] is defined %}
                                     <li class="splide__slide">
                                         <picture>
                                             <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ workContents.workSlideImages02.one().getUrl() }}" width="447" height="649" alt="">
+                                            <img class="work__slide" src="{{ slides[1].getUrl() }}" width="447" height="649" alt="">
                                         </picture>
                                     </li>
                                 {% endif %}
-                               {% if workContents.workSlideImages03 is not empty %}
+                                {% if slides[2] is defined %}
                                     <li class="splide__slide">
                                         <picture>
                                             <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ workContents.workSlideImages03.one().getUrl() }}" width="447" height="649" alt="">
+                                            <img class="work__slide" src="{{ slides[2].getUrl() }}" width="447" height="649" alt="">
                                         </picture>
                                     </li>
-                                {% endif %} #}
-
-
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-                                <li class="splide__slide">
-                                    <picture>
-                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
-                                    </picture>
-                                </li>
-
+                                {% endif %}
+                                {% if slides[0] is defined %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ slides[0].getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                                {% if slides[1] is defined %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ slides[1].getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                                {% if slides[2] is defined %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ slides[2].getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                            {% endif %}
                             </ul>
                         </div>
                     </div>
-                    <div class="next-page__link__sub">
+                    {# <div class="next-page__link__sub">
                         <a href="" class="next-page">
                             <img class="next-page__img" src="/images/next__small@2x.webp" width="330" height="234" alt="">
                             <div class="next-page__nav">
@@ -127,7 +115,7 @@
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
-                    </div>
+                    </div> #}
                 </div>
             {% endfor %}
             </div>
@@ -150,7 +138,7 @@
             var splide = new Splide('.splide', {
                 type: 'loop', 
                 perPage: 2,
-                gap: '1.5rem',
+
                 padding: { left: '16rem', right: '16rem' },
                 arrows: false,
                 pagination: false,
