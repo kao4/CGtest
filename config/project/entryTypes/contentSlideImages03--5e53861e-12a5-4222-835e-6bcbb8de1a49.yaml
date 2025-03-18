@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  e3a06917-6c94-4eae-b1dd-8c8d96f82444:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-03-18T03:07:34+00:00'
+            elementCondition: null
+            fieldUid: 94b444e0-09e6-4ddd-a2de-73b8f6fc1d90 # workスライド画像03
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aaca72d6-0ceb-4a43-af11-942b98b568f8
+            userCondition: null
+            warning: null
+            width: 100
+        name: コンテンツ
+        uid: c51ca276-86e3-417e-9a10-39f910052bd0
+        userCondition: null
+handle: contentSlideImages03
+hasTitleField: false
+icon: null
+name: スライド画像03
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

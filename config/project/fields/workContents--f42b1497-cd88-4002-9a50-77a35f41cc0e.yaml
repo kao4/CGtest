@@ -16,7 +16,17 @@ settings:
       __assoc__:
         -
           - uid
-          - 87a68457-070e-40c1-bc4f-fdaac0a48fb6 # スライド画像
+          - 87a68457-070e-40c1-bc4f-fdaac0a48fb6 # スライド画像01
+    -
+      __assoc__:
+        -
+          - uid
+          - cf67f92d-40b1-4976-850f-2913f3d7caba # スライド画像02
+    -
+      __assoc__:
+        -
+          - uid
+          - 5e53861e-12a5-4222-835e-6bcbb8de1a49 # スライド画像03
   includeTableView: false
   maxEntries: null
   minEntries: 1

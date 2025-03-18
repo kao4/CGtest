@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="Ja">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>CG__Works-entry</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+{% extends '_layout' %}
 
-</head>
-<body>
+{% block content %}
     {% set workEntries = craft.entries()
         .section('WorksEntry')
         .type('worksEntry')
@@ -54,46 +41,83 @@
                 </div>
             </div>
             <div class="work__body">      
-            {% for workContent in entry.workContents.all() %} 
+            {% for workContents in entry.workContents.all() %} 
                 <div class="work__hero-wrapper">
-                    {% if workContent.workImage1col is not empty %}
+                    {% if workContents.workImage1col is not empty %}
                         <picture>
                             <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__body-top-img" src="{{ workContent.workImage1col.one().getUrl() }}" width="919" height="654" alt="">
+                            <img class="work__body-top-img" src="{{ workContents.workImage1col.one().getUrl() }}" width="919" height="654" alt="">
                         </picture>
                     {% endif %}
-                    {# <div class="splide" aria-label="works__slide">
+                    <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
                             <ul class="splide__list">
-                            {% if workContent.workSlideImages|length %}
-                                {% for image in workContent.workSlideImages.all() %}
+                                {# {% if workContents.workSlideImages01 is not empty %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ workContents.workSlideImages01.one().getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                                {% if workContents.workSlideImages02 is not empty %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ workContents.workSlideImages02.one().getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                               {% if workContents.workSlideImages03 is not empty %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ workContents.workSlideImages03.one().getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %} #}
+
+
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
+                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
                                     </picture>
                                 </li>
-                                {% endfor %}
-                                {% for image in workContent.workSlideImages.all() %}
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
+                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
                                     </picture>
                                 </li>
-                                {% endfor %}
-                                {% for image in workContent.workSlideImages.all() %}
                                 <li class="splide__slide">
                                     <picture>
                                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                        <img class="work__slide" src="{{ image.getUrl() }}" width="447" height="649" alt="">
+                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
                                     </picture>
                                 </li>
-                                {% endfor %}
-                            {% endif %}
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide01@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide02@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+                                <li class="splide__slide">
+                                    <picture>
+                                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                        <img class="work__slide" src="/images/slide03@2x.webp" width="447" height="649" alt="">
+                                    </picture>
+                                </li>
+
                             </ul>
                         </div>
-                    </div> #}
+                    </div>
                     <div class="next-page__link__sub">
                         <a href="" class="next-page">
                             <img class="next-page__img" src="/images/next__small@2x.webp" width="330" height="234" alt="">
@@ -108,7 +132,7 @@
             {% endfor %}
             </div>
         </section>
-    
+{#     
         <section class="next-page__link">
             <a href="" class="next-page">
                 <img class="next-page__img" src="/images/next__small@2x.webp" width="1440" height="1024" alt="">
@@ -118,27 +142,35 @@
                     <img src="/images/next-page__arrow.svg" alt="nextページへ">
                 </div>
             </a>
-        </section>
+        </section> #}
     {% endfor %}  
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var splide = new Splide('.splide', {
-                type: 'loop',  // loopの代わりにslideを使用
+                type: 'loop', 
                 perPage: 2,
                 gap: '1.5rem',
                 padding: { left: '16rem', right: '16rem' },
                 arrows: false,
                 pagination: false,
                 autoplay: 'play',
-                height: '649px', 
+                breakpoints: {
+                    1200: {
+                        perPage: 2,
+                        padding: { left: '4rem', right: '4rem' }
+                    },
+                    960: {
+                        perPage: 1,
+                        padding: { left: '4rem', right: '4rem' }
+                    }
+                },
                 interval: 3000,    // スライド間隔（ミリ秒）
-                pauseOnHover: false, // ホバー時に停止しない
-                pauseOnFocus: false, // フォーカス時に停止しない
+                pauseOnHover: false, 
+                pauseOnFocus: false,
                 resetProgress: false,
             });
             splide.mount();
         });
     </script>
-</body>
-</html>
+{% endblock %}
