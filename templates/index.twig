@@ -1,29 +1,25 @@
 {% extends '_layout' %}
 
 {% block content %}
-    {% set worksEntries = craft.entries()
-        .section('WorksEntry')
-        .type('worksEntry')
-        .all() %}
     {# 現在のエントリを取得 #}
-    {% set currentEntry = craft.entries()
+    {% set worksEntry = craft.entries()
         .section('WorksEntry')
         .type('worksEntry')
         .one() %}
 
     {# 次のエントリを取得 #}
-    {% set nextEntry = currentEntry.next({
+    {% set nextEntry = worksEntry.next({
         section: 'WorksEntry',
         type: 'worksEntry'
     }) %}
     
-    {% for entry in worksEntries %}  
+    {% if worksEntry %} 
         <section class="work__hero"> 
             <div class="work__hero-wrapper">
-                {% if entry.worksTopImage is not empty %}
+                {% if worksEntry.worksTopImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="hero-img" src="{{ entry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="hero-img" src="{{ worksEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
             </div>  
@@ -31,12 +27,12 @@
         <section class="work__contents">
             <div class="work__heading">
                 <h1 class="work__title">
-                    {% for line in entry.title | split('|') %}
+                    {% for line in worksEntry.title | split('|') %}
                         {{ line }}{% if not loop.last %}<br>{% endif %}
                     {% endfor %}
                 </h1>
                 <div class="work__info">
-                    <div class="work__summary">{{ entry.worksSummary }}</div>
+                    <div class="work__summary">{{ worksEntry.worksSummary }}</div>
                     <div class="work__details">
                         <div class="work__detail__site">
                             <a href="" class="work__detail__site-link">
@@ -45,15 +41,15 @@
                             </a>
                         </div>
                         <div class="work__detail__space">
-                            <p class="work__year">{{ entry.worksYear }}</p>
-                            <p class="work__client">Client：{{ entry.worksClient }}</p>
-                            <p>{{ entry.worksSpace | join('<br>') | raw }}</p>
+                            <p class="work__year">{{ worksEntry.worksYear }}</p>
+                            <p class="work__client">Client：{{ worksEntry.worksClient }}</p>
+                            <p>{{ worksEntry.worksSpace | join('<br>') | raw }}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="work__body">      
-            {% for worksContents in entry.worksContents.all() %} 
+            {% for worksContents in worksEntry.worksContents.all() %} 
                 <div class="work__hero-wrapper">
                     {% if worksContents.worksContentsImage1 is not empty %}
                         <picture>
@@ -113,17 +109,17 @@
         </section>
 
         {# Nextリンクの表示 #}
-    {% if nextEntry and nextEntry.worksTopImage %}
-        <section class="next-page__link">
-            <a href="{{ nextEntry.url }}" class="next-page">
-                <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
-                <div class="next-page__nav">
-                    <h2 class="next-page__link__sub__title">Next</h2>
-                    <span>{{ nextEntry.title }}</span>
-                    <img src="/images/next-page__arrow.svg" alt="nextページへ">
-                </div>
-            </a>
-        </section>
-    {% endif %}
-    {% endfor %}  
+        {% if nextEntry and nextEntry.worksTopImage %}
+            <section class="next-page__link">
+                <a href="{{ nextEntry.url }}" class="next-page">
+                    <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                    <div class="next-page__nav">
+                        <h2 class="next-page__link__sub__title">Next</h2>
+                        <span>{{ nextEntry.title }}</span>
+                        <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                    </div>
+                </a>
+            </section>
+        {% endif %}
+    {% endif %} 
 {% endblock %}
