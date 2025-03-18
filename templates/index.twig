@@ -98,7 +98,7 @@
                             <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="330" height="234" alt="">
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
-                                <span>{{ nextEntry.title }}</span>
+                                <span>{{ nextEntry.title|replace({'|': ' '}) }}</span>
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
@@ -115,7 +115,7 @@
                     <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     <div class="next-page__nav">
                         <h2 class="next-page__link__sub__title">Next</h2>
-                        <span>{{ nextEntry.title }}</span>
+                        <span>{{ nextEntry.title|replace({'|': ' '}) }}</span>
                         <img src="/images/next-page__arrow.svg" alt="nextページへ">
                     </div>
                 </a>

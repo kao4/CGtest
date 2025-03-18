@@ -5,6 +5,8 @@ fieldLayouts:
       - id
       - slug
       - dateCreated
+      - uri
+      - link
     tabs:
       -
         elementCondition: null
