@@ -78,30 +78,6 @@
                                         </picture>
                                     </li>
                                 {% endif %}
-                                {% if slides[0] is defined %}
-                                    <li class="splide__slide">
-                                        <picture>
-                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ slides[0].getUrl() }}" width="447" height="649" alt="">
-                                        </picture>
-                                    </li>
-                                {% endif %}
-                                {% if slides[1] is defined %}
-                                    <li class="splide__slide">
-                                        <picture>
-                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ slides[1].getUrl() }}" width="447" height="649" alt="">
-                                        </picture>
-                                    </li>
-                                {% endif %}
-                                {% if slides[2] is defined %}
-                                    <li class="splide__slide">
-                                        <picture>
-                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                            <img class="work__slide" src="{{ slides[2].getUrl() }}" width="447" height="649" alt="">
-                                        </picture>
-                                    </li>
-                                {% endif %}
                             {% endif %}
                             </ul>
                         </div>
@@ -135,30 +111,33 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var splide = new Splide('.splide', {
-                type: 'loop', 
-                perPage: 2,
-
-                padding: { left: '16rem', right: '16rem' },
-                arrows: false,
-                pagination: false,
-                autoplay: 'play',
-                breakpoints: {
-                    1200: {
-                        perPage: 2,
-                        padding: { left: '4rem', right: '4rem' }
+            // すべてのスライダーを取得
+            document.querySelectorAll('.splide').forEach(function(element) {
+                new Splide(element, {
+                    type: 'loop', 
+                    perPage: 2.5,
+                    gap: '1.5rem', 
+                    padding: { left: '16rem', right: '16rem' },
+                    arrows: false,
+                    pagination: false,
+                    autoplay: false,  // 'true'文字列ではなくtrueブール値に
+                    speed: 1000,
+                    breakpoints: {
+                        1200: {
+                            perPage: 2,
+                            padding: { left: '4rem', right: '4rem' }
+                        },
+                        960: {
+                            perPage: 1.5,
+                            padding: { left: '4rem', right: '4rem' }
+                        }
                     },
-                    960: {
-                        perPage: 1,
-                        padding: { left: '4rem', right: '4rem' }
-                    }
-                },
-                interval: 3000,    // スライド間隔（ミリ秒）
-                pauseOnHover: false, 
-                pauseOnFocus: false,
-                resetProgress: false,
+                    interval: 3000,
+                    pauseOnHover: false, 
+                    pauseOnFocus: false,
+                    resetProgress: false,
+                }).mount();
             });
-            splide.mount();
         });
     </script>
 {% endblock %}

@@ -82,12 +82,14 @@ body {
       justify-content: center;
       align-items: center;
       gap: 1.5rem;
+      transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .splide__slide {
       display: block;
       width: 28rem;
       height: 40rem;
-      visibility: visible;
+      opacity: 1 !important;
+      visibility: visible !important;
 
       picture {
         display: block;
@@ -101,6 +103,15 @@ body {
         aspect-ratio: 28 / 40;
       }
     }
+  }
+  /* スライド画像のフェード防止 */
+  .work__slide {
+    transition: none;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
   }
   .next-page__link__sub {
     width: 57rem;
