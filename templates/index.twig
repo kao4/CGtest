@@ -5,6 +5,18 @@
         .section('WorksEntry')
         .type('worksEntry')
         .all() %}
+    {# 現在のエントリを取得 #}
+    {% set currentEntry = craft.entries()
+        .section('WorksEntry')
+        .type('worksEntry')
+        .one() %}
+
+    {# 次のエントリを取得 #}
+    {% set nextEntry = currentEntry.next({
+        section: 'WorksEntry',
+        type: 'worksEntry'
+    }) %}
+    
     {% for entry in worksEntries %}  
         <section class="work__hero"> 
             <div class="work__hero-wrapper">
@@ -82,62 +94,36 @@
                             </ul>
                         </div>
                     </div>
-                    {# <div class="next-page__link__sub">
-                        <a href="" class="next-page">
-                            <img class="next-page__img" src="/images/next__small@2x.webp" width="330" height="234" alt="">
+            {% endfor %}
+                {# Nextリンクの表示 #}
+                {% if nextEntry and nextEntry.worksTopImage %}
+                    <div class="next-page__link__sub">
+                        <a href="{{ nextEntry.url }}" class="next-page">
+                            <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="330" height="234" alt="">
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
-                                <span>Codegraph Namecard</span>
+                                <span>{{ nextEntry.title }}</span>
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
-                    </div> #}
+                    </div>
+                {% endif %}
                 </div>
-            {% endfor %}
             </div>
         </section>
-{#     
+
+        {# Nextリンクの表示 #}
+    {% if nextEntry and nextEntry.worksTopImage %}
         <section class="next-page__link">
-            <a href="" class="next-page">
-                <img class="next-page__img" src="/images/next__small@2x.webp" width="1440" height="1024" alt="">
+            <a href="{{ nextEntry.url }}" class="next-page">
+                <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                 <div class="next-page__nav">
                     <h2 class="next-page__link__sub__title">Next</h2>
-                    <span>Codegraph Namecard</span>
+                    <span>{{ nextEntry.title }}</span>
                     <img src="/images/next-page__arrow.svg" alt="nextページへ">
                 </div>
             </a>
-        </section> #}
+        </section>
+    {% endif %}
     {% endfor %}  
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // すべてのスライダーを取得
-            document.querySelectorAll('.splide').forEach(function(element) {
-                new Splide(element, {
-                    type: 'loop', 
-                    perPage: 2.5,
-                    gap: '1.5rem', 
-                    padding: { left: '16rem', right: '16rem' },
-                    arrows: false,
-                    pagination: false,
-                    autoplay: false,  // 'true'文字列ではなくtrueブール値に
-                    speed: 1000,
-                    breakpoints: {
-                        1200: {
-                            perPage: 2,
-                            padding: { left: '4rem', right: '4rem' }
-                        },
-                        960: {
-                            perPage: 1.5,
-                            padding: { left: '4rem', right: '4rem' }
-                        }
-                    },
-                    interval: 3000,
-                    pauseOnHover: false, 
-                    pauseOnFocus: false,
-                    resetProgress: false,
-                }).mount();
-            });
-        });
-    </script>
 {% endblock %}

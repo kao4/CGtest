@@ -12,7 +12,7 @@ settings:
   defaultUploadLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: 5
+  maxRelations: 3
   minRelations: 1
   previewMode: full
   restrictFiles: false
