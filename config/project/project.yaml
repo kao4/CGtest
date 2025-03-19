@@ -1,4 +1,4 @@
-dateModified: 1742288158
+dateModified: 1742354843
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
@@ -16,13 +16,16 @@ meta:
     0ec3aa91-e4e8-4340-a06a-519f38ee7424: Work # Work
     2a1d939d-8dd8-41f9-ba38-c92b3e2bacb2: works作業領域 # works作業領域
     3a35e34e-277e-47e5-94e8-8f4ff3887ee0: 'Works -Entry' # Works -Entry
+    3f9f11ec-2516-48ab-8150-43a411e981cc: 'Works - Index' # Works - Index
     8a6d1f5e-9c85-44b2-a454-d4906858e36c: worksTOP画像 # worksTOP画像
     13bc13f8-c9b4-42d9-b39e-66f157aa8554: worksコンテンツ画像１枚 # worksコンテンツ画像１枚
     81ba1093-a582-4e79-a6ed-2be54a743712: worksクライアント # worksクライアント
     83eb390c-c35e-461d-98ba-7f956701ba81: worksスライド画像 # worksスライド画像
     3172e165-5a99-41e4-876f-6b03fa7dbbf1: worksコンテンツ画像１枚 # worksコンテンツ画像１枚
     04546a57-f2f5-462c-93ad-04dba5962df5: works公開年 # works公開年
+    ae3c0b97-597c-4f6a-8edc-57c2dd41e5ce: worksエージェント # worksエージェント
     bffa93b7-d62e-412f-be4a-661c30b74b33: CGtest # CGtest
+    cc29658c-c25a-4148-9c08-e722eb9a1c7b: 'Works - Index' # Works - Index
     dab1d1ad-6698-4403-a8d7-5eab5fc3ea28: works概要 # works概要
     df661a93-b36d-4097-b71a-954549e12cbb: 'Works Entry' # Works Entry
     e1547157-8cce-47ee-ad7b-ecafd023889a: CGtest # CGtest

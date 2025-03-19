@@ -1,11 +1,11 @@
-defaultPlacement: beginning
+defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: df661a93-b36d-4097-b71a-954549e12cbb # Works Entry
-handle: worksEntry
+    uid: 3f9f11ec-2516-48ab-8150-43a411e981cc # Works - Index
+handle: worksIndex
 maxAuthors: 1
-name: 'Works -Entry'
+name: 'Works - Index'
 previewTargets:
   -
     __assoc__:
@@ -23,9 +23,6 @@ siteSettings:
   e1547157-8cce-47ee-ad7b-ecafd023889a: # CGtest
     enabledByDefault: true
     hasUrls: true
-    template: works/_entry
-    uriFormat: 'works/{slug}'
-structure:
-  maxLevels: null
-  uid: e6fbcb61-8cad-49aa-8fef-8f4b68c82cc3
-type: structure
+    template: works-index/_entry.twig
+    uriFormat: works-index
+type: single

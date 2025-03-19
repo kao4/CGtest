@@ -13,7 +13,7 @@ settings:
           - Planning
         -
           - value
-          - planning
+          - Planning
         -
           - default
           - ''
@@ -24,7 +24,7 @@ settings:
           - 'Web Direction'
         -
           - value
-          - webDirection
+          - 'Web Direction'
         -
           - default
           - ''
@@ -57,7 +57,7 @@ settings:
           - Photograph
         -
           - value
-          - photograph
+          - Photograph
         -
           - default
           - ''
@@ -68,7 +68,7 @@ settings:
           - Videograph
         -
           - value
-          - videograph
+          - Videograph
         -
           - default
           - ''
@@ -79,7 +79,7 @@ settings:
           - 'Graphic Design'
         -
           - value
-          - graphicDesign
+          - 'Graphic Design'
         -
           - default
           - ''
@@ -90,7 +90,7 @@ settings:
           - Copywriting
         -
           - value
-          - copywriting
+          - Copywriting
         -
           - default
           - ''
@@ -101,7 +101,7 @@ settings:
           - Illustration
         -
           - value
-          - illustration
+          - Illustration
         -
           - default
           - ''

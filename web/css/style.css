@@ -46,15 +46,15 @@ body {
       font-weight: 700;
       padding-bottom: 6rem;
     }
-    .work__client {
+    .work__space {
+      padding-top: 1.4rem;
       position: relative;
-      padding-bottom: 1rem;
     }
-    .work__client::before {
+    .work__space::before {
       display: flex;
       content: "";
       position: absolute;
-      bottom: 0.5rem;
+      top: 0.75rem;
       left: 0;
       width: 3rem;
       border-bottom: 1px solid #1c1c1c;
@@ -81,7 +81,6 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 1.5rem;
       transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     .splide__slide {
