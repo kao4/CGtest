@@ -12,6 +12,7 @@
         section: 'WorksEntry',
         type: 'worksEntry'
     }) %}
+
     
     {% if worksEntry %} 
         <section class="work__hero"> 
@@ -96,38 +97,54 @@
                         </div>
                     </div>
             {% endfor %}
-                {# Nextリンクの表示 #}
-                {% if nextEntry and nextEntry.worksTopImage %}
+
                     <div class="next-page__link__sub">
-                        <a href="{{ nextEntry.url }}" class="next-page">
-                            <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="330" height="234" alt="">
+                         {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
+                        {% set topEntry = nextEntry ?? craft.entries()
+                            .section('WorksEntry')
+                            .type('worksEntry')
+                            .orderBy('postDate ASC')
+                            .one() %}
+
+                        {# リンク先のURLを設定 #}
+                        {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
+
+                        <a href="{{ linkUrl }}" class="next-page">
+                            <img class="next-page__img" src="{{ topEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
-                                {# <span>{{ nextEntry.title|replace({'|': ' '}) }}</span> #}
-                                {% for line in nextEntry.title | split('|') %}
+                                {% for line in topEntry.title | split('|') %}
                                     {{ line }}{% if not loop.last %}<br>{% endif %}
                                 {% endfor %}
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
                     </div>
-                {% endif %}
                 </div>
             </div>
         </section>
 
-        {# Nextリンクの表示 #}
-        {% if nextEntry and nextEntry.worksTopImage %}
-            <section class="next-page__link">
-                <a href="{{ nextEntry.url }}" class="next-page">
-                    <img class="next-page__img" src="{{ nextEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
-                    <div class="next-page__nav">
-                        <h2 class="next-page__link__sub__title">Next</h2>
-                        <span>{{ nextEntry.title|replace({'|': ' '}) }}</span>
-                        <img src="/images/next-page__arrow.svg" alt="nextページへ">
-                    </div>
-                </a>
-            </section>
-        {% endif %}
+        <section class="next-page__link">
+            {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
+            {% set topEntry = nextEntry ?? craft.entries()
+                .section('WorksEntry')
+                .type('worksEntry')
+                .orderBy('postDate ASC')
+                .one() %}
+
+            {# リンク先のURLを設定 #}
+            {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
+
+            <a href="{{ linkUrl }}" class="next-page">
+                <img class="next-page__img" src="{{ topEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                <div class="next-page__nav">
+                    <h2 class="next-page__link__sub__title">Next</h2>
+                    {% for line in topEntry.title | split('|') %}
+                        {{ line }}{% if not loop.last %}<br>{% endif %}
+                    {% endfor %}
+                    <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                </div>
+            </a>
+        </section>  
     {% endif %} 
 {% endblock %}
