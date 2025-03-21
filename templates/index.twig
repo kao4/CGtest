@@ -56,12 +56,21 @@
             </div>
             <div class="work__body">      
             {% for worksContents in worksEntry.worksContents.all() %} 
-                <div class="work__hero-wrapper">
+                <div class="work__body-wrapper">
                     {% if worksContents.worksContentsImage1 is not empty %}
-                        <picture>
-                            <source media="(max-width: 960px)" srcset="" type="image/webp">
-                            <img class="work__body-top-img" src="{{ worksContents.worksContentsImage1.one().getUrl() }}" width="919" height="654" alt="">
-                        </picture>
+                        {% set media = worksContents.worksContentsImage1.one() %}
+                        {% if media.kind == 'video' %}
+                            {# 動画の場合 #}
+                            <video class="work__body-top--video" autoplay loop muted playsinline>
+                                <source src="{{ media.getUrl() }}" type="video/mp4">
+                            </video>
+                        {% else %}
+                            {# 画像の場合 #}
+                            <picture>
+                                <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                <img class="work__body-top-img" src="{{ media.getUrl() }}" width="919" height="695" alt="">
+                            </picture>
+                        {% endif %}
                     {% endif %}
                     <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
