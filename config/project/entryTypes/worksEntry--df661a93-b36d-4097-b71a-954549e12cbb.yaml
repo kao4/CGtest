@@ -137,6 +137,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-03-21T03:50:35+00:00'
+            elementCondition: null
+            fieldUid: 15978369-dc92-4cc0-ad10-24f4b0ad9b3f # nextエントリ画像
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 423351d8-1351-415f-adbf-0d950c548da2
+            userCondition: null
+            warning: null
+            width: 100
         name: コンテンツ
         uid: 8e003d1f-c464-4679-8b4e-642384215822
         userCondition: null

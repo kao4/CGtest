@@ -8,6 +8,7 @@ settings:
   allowSubfolders: false
   allowUploads: true
   allowedKinds:
+    - video
     - image
   branchLimit: null
   defaultUploadLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work

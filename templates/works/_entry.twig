@@ -106,7 +106,12 @@
                         {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
 
                         <a href="{{ linkUrl }}" class="next-page">
-                            <img class="next-page__img" src="{{ topEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                            {% if topEntry.nextEntryImage is not empty %}
+                                <picture>
+                                    <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                    <img class="hero-img" src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                                </picture>
+                            {% endif %}
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
                                 {% for line in topEntry.title | split('|') %}
@@ -121,18 +126,13 @@
         </section>
 
         <section class="next-page__link">
-            {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
-            {% set topEntry = craft.entries()
-                .section('WorksEntry')
-                .type('worksEntry')
-                .orderBy('postDate ASC')
-                .one() %}
-
-            {# リンク先のURLを設定 #}
-            {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
-
             <a href="{{ linkUrl }}" class="next-page">
-                <img class="next-page__img" src="{{ topEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                {% if topEntry.nextEntryImage is not empty %}
+                    <picture>
+                        <source media="(max-width: 960px)" srcset="" type="image/webp">
+                        <img class="hero-img" src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                    </picture>
+                {% endif %}
                 <div class="next-page__nav">
                     <h2 class="next-page__link__sub__title">Next</h2>
                     {% for line in topEntry.title | split('|') %}
