@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".splide").forEach(function (element) {
     new Splide(element, {
       type: "loop",
-      perPage: 2.5,
+      perPage: 2,
       gap: "1.5rem",
       padding: { left: "16rem", right: "16rem" },
       arrows: false,

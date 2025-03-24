@@ -12,7 +12,6 @@
         section: 'WorksEntry',
         type: 'worksEntry'
     }) %}
-
     
     {% if worksEntry %} 
         <section class="work__hero"> 
@@ -131,14 +130,14 @@
                         <a href="{{ nextEntry.url }}" class="next-page">
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img class="next-page-img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img class="next-page__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
                                 {% for line in nextEntry.title | split('|') %}
                                     {{ line }}{% if not loop.last %}<br>{% endif %}
                                 {% endfor %}
-                                <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                                <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
                     </div>
@@ -151,7 +150,7 @@
                 {% if nextEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="next-page__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">
@@ -159,7 +158,7 @@
                     {% for line in nextEntry.title | split('|') %}
                         {{ line }}{% if not loop.last %}<br>{% endif %}
                     {% endfor %}
-                    <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                    <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                 </div>
             </a>
         </section>  
