@@ -127,17 +127,17 @@
                     {% endif %}
             {% endfor %}
 
+                {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
+                {% set topEntry = nextEntry ?? craft.entries()
+                    .section('WorksEntry')
+                    .type('worksEntry')
+                    .orderBy('postDate ASC')
+                    .one() %}
+
+                {# リンク先のURLを設定 #}
+                {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
+
                     <div class="next-page__link__sub">
-                         {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
-                        {% set topEntry = nextEntry ?? craft.entries()
-                            .section('WorksEntry')
-                            .type('worksEntry')
-                            .orderBy('postDate ASC')
-                            .one() %}
-
-                        {# リンク先のURLを設定 #}
-                        {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
-
                         <a href="{{ linkUrl }}" class="next-page">
                             {% if topEntry.nextEntryImage is not empty %}
                                 <picture>
