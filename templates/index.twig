@@ -57,8 +57,9 @@
             <div class="work__body">      
             {% for worksContents in worksEntry.worksContents.all() %} 
                 <div class="work__body-wrapper">
+                    {# 画像1枚の処理 #}
                     {% if worksContents.worksContentsImage1 is not empty %}
-                        {% set media = worksContents.worksContentsImage1.one() %}
+                        {% for media in worksContents.worksContentsImage1.all() %}
                         {% if media.kind == 'video' %}
                             {# 動画の場合 #}
                             <video class="work__body-top--video" autoplay loop muted playsinline>
@@ -71,7 +72,10 @@
                                 <img class="work__body-top-img" src="{{ media.getUrl() }}" width="919" height="695" alt="">
                             </picture>
                         {% endif %}
+                        {% endfor %}
                     {% endif %}
+
+                    {# スライド画像の処理 #}
                     {% if worksContents.worksSlideImages is not empty and worksContents.worksSlideImages.all()|length > 0 %}
                     <div class="splide" aria-label="works__slide">
                         <div class="splide__track">

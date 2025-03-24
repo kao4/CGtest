@@ -53,21 +53,28 @@
             <div class="work__body">      
             {% for worksContents in worksEntry.worksContents.all() %} 
                 <div class="work__body-wrapper">
-                    {% if worksContents.worksContentsImage1 is not empty %}
-                        {% set media = worksContents.worksContentsImage1.one() %}
-                        {% if media.kind == 'video' %}
-                            {# 動画の場合 #}
-                            <video class="work__body-top--video" autoplay loop muted playsinline>
-                                <source src="{{ media.getUrl() }}" type="video/mp4">
-                            </video>
-                        {% else %}
-                            {# 画像の場合 #}
-                            <picture>
-                                <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                <img class="work__body-top-img" src="{{ media.getUrl() }}" width="919" height="695" alt="">
-                            </picture>
+                    <div class="work__body-top">
+                        {# 画像1枚の処理 #}
+                        {% if worksContents.worksContentsImage1 is not empty %}
+                            {% for media in worksContents.worksContentsImage1.all() %}
+                            {% if media.kind == 'video' %}
+                                {# 動画の場合 #}
+                                <video class="work__body-top--video" autoplay loop muted playsinline>
+                                    <source src="{{ media.getUrl() }}" type="video/mp4">
+                                </video>
+                            {% else %}
+                                {# 画像の場合 #}
+                                <picture class="work__body-top-picture">
+                                    <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                    <img class="work__body-top-img" src="{{ media.getUrl() }}" width="919" height="695" alt="">
+                                </picture>
+                            {% endif %}
+                            {% endfor %}
                         {% endif %}
-                    {% endif %}
+                    </div>
+                    
+
+                    {# スライド画像の処理 #}
                     {% if worksContents.worksSlideImages is not empty and worksContents.worksSlideImages.all()|length > 0 %}
                     <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
@@ -118,28 +125,30 @@
                     </div>
                     {% endif %}
             {% endfor %}
-            
+                {# 最初のエントリを取得 #}
+                {% set firstEntry = craft.entries()
+                    .section('WorksEntry')
+                    .type('worksEntry')
+                    .orderBy('postDate ASC')
+                    .one() %}
+
+                {# 次のエントリがない場合は最初のエントリを使用 #}
+                {% set displayEntry = nextEntry ?? firstEntry %}
+
+                {# リンク先のURLを設定 #}
+                {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
+
                     <div class="next-page__link__sub">
-                        {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
-                        {% set topEntry = nextEntry ?? craft.entries()
-                            .section('WorksEntry')
-                            .type('worksEntry')
-                            .orderBy('postDate ASC')
-                            .one() %}
-
-                        {# リンク先のURLを設定 #}
-                        {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
-
                         <a href="{{ linkUrl }}" class="next-page">
-                            {% if topEntry.nextEntryImage is not empty %}
+                            {% if displayEntry.nextEntryImage is not empty %}
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             {% endif %}
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
-                                {% for line in topEntry.title | split('|') %}
+                                {% for line in displayEntry.title | split('|') %}
                                     {{ line }}{% if not loop.last %}<br>{% endif %}
                                 {% endfor %}
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
@@ -152,15 +161,15 @@
 
         <section class="next-page__link">
             <a href="{{ linkUrl }}" class="next-page">
-                {% if topEntry.nextEntryImage is not empty %}
+                {% if displayEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">
                     <h2 class="next-page__link__sub__title">Next</h2>
-                    {% for line in topEntry.title | split('|') %}
+                    {% for line in displayEntry.title | split('|') %}
                         {{ line }}{% if not loop.last %}<br>{% endif %}
                     {% endfor %}
                     <img src="/images/next-page__arrow.svg" alt="nextページへ">
