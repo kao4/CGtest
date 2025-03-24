@@ -68,10 +68,10 @@
                             </picture>
                         {% endif %}
                     {% endif %}
+                    {% if worksContents.worksSlideImages is not empty and worksContents.worksSlideImages.all()|length > 0 %}
                     <div class="splide" aria-label="works__slide">
                         <div class="splide__track">
                             <ul class="splide__list">
-                            {% if worksContents.worksSlideImages is not empty %}
                                 {% set slides = worksContents.worksSlideImages.all() %}
                                 {% if slides[0] is defined %}
                                     <li class="splide__slide">
@@ -97,10 +97,26 @@
                                         </picture>
                                     </li>
                                 {% endif %}
-                            {% endif %}
+                                {% if slides[3] is defined %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ slides[3].getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
+                                {% if slides[4] is defined %}
+                                    <li class="splide__slide">
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="work__slide" src="{{ slides[4].getUrl() }}" width="447" height="649" alt="">
+                                        </picture>
+                                    </li>
+                                {% endif %}
                             </ul>
                         </div>
                     </div>
+                    {% endif %}
             {% endfor %}
             
                     <div class="next-page__link__sub">
