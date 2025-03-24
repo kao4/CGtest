@@ -9,7 +9,24 @@
         section: 'WorksEntry',
         type: 'worksEntry'
     }) %}
-            
+    
+    {# 最初のエントリを取得（orderBy('postDate ASC')で最も古いエントリ = TOPに表示されるエントリ） #}
+    {% set firstEntry = craft.entries()
+        .section('WorksEntry')
+        .type('worksEntry')
+        .orderBy('postDate DESC')
+        .limit(1)
+        .one() %}
+    {# 表示するエントリとリンク先を設定 #}
+    {% if nextEntry %}
+        {% set displayEntry = nextEntry %}
+        {% set linkUrl = nextEntry.url %}
+    {% else %}
+        {# 次のエントリがない場合（最後のエントリの場合）は最初のエントリを表示 #}
+        {% set displayEntry = firstEntry %}
+        {% set linkUrl = '/' %}
+    {% endif %}
+
     {% if worksEntry %} 
         <section class="work__hero"> 
             <div class="work__hero-wrapper">
@@ -126,27 +143,17 @@
                     {% endif %}
             {% endfor %}
 
-                {# 次のエントリがない場合、トップページの最初のエントリを取得 #}
-                {% set topEntry = nextEntry ?? craft.entries()
-                    .section('WorksEntry')
-                    .type('worksEntry')
-                    .orderBy('postDate ASC')
-                    .one() %}
-
-                {# リンク先のURLを設定 #}
-                {% set linkUrl = nextEntry ? nextEntry.url : '/' %}
-
                     <div class="next-page__link__sub">
                         <a href="{{ linkUrl }}" class="next-page">
-                            {% if topEntry.nextEntryImage is not empty %}
+                            {% if displayEntry.nextEntryImage is not empty %}
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             {% endif %}
                             <div class="next-page__nav">
                                 <h2 class="next-page__link__sub__title">Next</h2>
-                                {% for line in topEntry.title | split('|') %}
+                                {% for line in displayEntry.title | split('|') %}
                                     {{ line }}{% if not loop.last %}<br>{% endif %}
                                 {% endfor %}
                                 <img src="/images/next-page__arrow.svg" alt="nextページへ">
@@ -159,15 +166,15 @@
 
         <section class="next-page__link">
             <a href="{{ linkUrl }}" class="next-page">
-                {% if topEntry.nextEntryImage is not empty %}
+                {% if displayEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img src="{{ topEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">
                     <h2 class="next-page__link__sub__title">Next</h2>
-                    {% for line in topEntry.title | split('|') %}
+                    {% for line in displayEntry.title | split('|') %}
                         {{ line }}{% if not loop.last %}<br>{% endif %}
                     {% endfor %}
                     <img src="/images/next-page__arrow.svg" alt="nextページへ">
