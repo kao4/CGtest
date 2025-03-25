@@ -148,7 +148,7 @@
                             {% if displayEntry.nextEntryImage is not empty %}
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img class="next-page__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             {% endif %}
                             <div class="next-page__nav">
@@ -169,7 +169,7 @@
                 {% if displayEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="next-page__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">

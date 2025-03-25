@@ -125,6 +125,7 @@ body {
 }
 .next-page__link__sub {
   width: 57rem;
+  height: auto;
   display: flex;
   justify-content: end;
   margin-inline: auto;
@@ -136,14 +137,9 @@ body {
     position: relative;
     .next-page__img {
       width: 100%;
-      height: unset;
+      height: 100%;
       display: block;
       object-fit: cover;
-    }
-  }
-  .next-page__nav {
-    img {
-      width: 1.6rem;
     }
   }
 }
@@ -161,6 +157,9 @@ body {
     border-bottom: 1px solid #1c1c1c;
     padding-bottom: 0.3rem;
     margin-bottom: 1.8rem;
+  }
+  img {
+    width: 1.6rem;
   }
 }
 .next-page__link {
