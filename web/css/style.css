@@ -9,35 +9,72 @@ body {
 .work__hero {
   .work__hero-wrapper {
     padding-bottom: 9rem;
+    @media (max-width: 960px) {
+      padding-bottom: 6rem;
+    }
   }
   .work__hero-img {
     width: 100%;
+    height: 100%;
+    @media (max-width: 960px) {
+      height: 40rem;
+      object-fit: cover;
+    }
   }
 }
 .work__contents {
   width: 100%;
   background: #e8e8e3;
+  @media (max-width: 1024px) {
+    width: 95%;
+    margin-inline: auto;
+  }
 }
 .work__heading {
   width: 57rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 9rem;
   margin-inline: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 6rem;
+  }
   .work__title {
+    width: 100%;
     font-size: 3rem;
     line-height: 130%;
     letter-spacing: 2%;
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
   }
 }
 .work__info {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .work__summary {
     width: 20rem;
     display: block;
     line-height: 180%;
     letter-spacing: 3%;
+    @media (max-width: 768px) {
+      width: 100%;
+
+      order: 2;
+    }
   }
   .work__details {
     width: 13rem;
@@ -45,9 +82,16 @@ body {
     flex-direction: column;
     line-height: 150%;
     letter-spacing: 3%;
+    @media (max-width: 768px) {
+      width: 100%;
+      order: 1; /* モバイル時に順番を変更 */
+    }
     .work__detail__site {
       font-weight: 700;
       padding-bottom: 6rem;
+      @media (max-width: 768px) {
+        padding-bottom: 3rem;
+      }
     }
     .work__detail__site-link {
       position: relative;
@@ -70,6 +114,9 @@ body {
     .work__space {
       padding-top: 1.4rem;
       position: relative;
+      @media (max-width: 768px) {
+        padding-bottom: 3rem;
+      }
     }
     .work__space::before {
       display: flex;
@@ -194,8 +241,10 @@ body {
     opacity: 0.7;
   }
   .next-page__nav {
-    top: 27rem;
+    width: 13rem;
+    top: 50%;
     right: 16rem;
+    transform: translateY(-50%);
     img {
       width: 1.6rem;
     }
