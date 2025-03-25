@@ -49,6 +49,24 @@ body {
       font-weight: 700;
       padding-bottom: 6rem;
     }
+    .work__detail__site-link {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .work__detail__site-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.2rem;
+      width: 0;
+      height: 1px;
+      background-color: #1c1c1c;
+      transition: width 0.3s ease-in-out;
+    }
+    .work__detail__site-link:hover::after {
+      width: 100%;
+    }
     .work__space {
       padding-top: 1.4rem;
       position: relative;
