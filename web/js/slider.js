@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplay: true,
       speed: 1000,
       breakpoints: {
-        960: {
-          perPage: 2,
-        },
+        // 960: {
+        //   perPage: 2,
+        // },
         // 960: {
         //   perPage: 1.5,
         //   padding: { left: "4rem", right: "4rem" },

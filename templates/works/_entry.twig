@@ -86,7 +86,7 @@
                             {% for media in worksContents.worksContentsImage1.all() %}
                             {% if media.kind == 'video' %}
                                 {# 動画の場合 #}
-                                <video class="work__body-top--video" autoplay loop muted playsinline>
+                                <video class="work__body-top-video" autoplay loop muted playsinline>
                                     <source src="{{ media.getUrl() }}" type="video/mp4">
                                 </video>
                             {% else %}

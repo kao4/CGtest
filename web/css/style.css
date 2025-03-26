@@ -148,14 +148,15 @@ body {
       margin-bottom: 3rem;
     }
   }
-  .work__body-top--video {
+  .work__body-top-video {
     width: 57rem;
     height: 43rem;
     display: block;
     object-fit: cover;
     margin-inline: auto;
     @media (max-width: 960px) {
-      width: 100%;
+      height: 33.5rem;
+      padding-inline: 1.8rem;
     }
   }
   .work__body-top-picture {
@@ -168,7 +169,7 @@ body {
     }
     .work__body-top-img {
       @media (max-width: 960px) {
-        width: 100%;
+        height: 33.5rem;
         padding-inline: 1.8rem;
       }
     }
