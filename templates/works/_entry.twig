@@ -17,6 +17,7 @@
         .orderBy('postDate DESC')
         .limit(1)
         .one() %}
+
     {# 表示するエントリとリンク先を設定 #}
     {% if nextEntry %}
         {% set displayEntry = nextEntry %}
@@ -188,5 +189,5 @@
                 </div>
             </a>
         </section>  
-    {% endif %} 
+    {% endif %}
 {% endblock %}
