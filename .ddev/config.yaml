@@ -13,7 +13,7 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 
-upload_dirs: ["web/uploads"]
+# upload_dirs: ["web/uploads"]
 performance_mode: "none"
 # Key features of DDEV's config.yaml:
 
