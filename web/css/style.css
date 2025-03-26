@@ -178,12 +178,11 @@ body {
     height: auto;
     overflow: hidden;
     .splide__track {
-      overflow: visible;
+      overflow: hidden;
     }
     .splide__list {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: nowrap;
     }
     .splide__slide {
       display: block;
