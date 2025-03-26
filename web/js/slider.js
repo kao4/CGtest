@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".splide").forEach(function (element) {
     new Splide(element, {
       type: "loop",
-      perPage: 2.5,
+      perPage: 3,
       perMove: 1 /* 1枚ずつスライド */,
       start: 0,
       gap: "1.5rem",
@@ -12,13 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplay: true,
       speed: 1000,
       breakpoints: {
-        // 960: {
-        //   perPage: 2,
-        // },
-        // 960: {
-        //   perPage: 1.5,
-        //   padding: { left: "4rem", right: "4rem" },
-        // },
+        960: {
+          perPage: 2.5,
+        },
+        800: {
+          perPage: 2,
+        },
+        500: {
+          perPage: 1.5,
+        },
+        400: {
+          perPage: 1,
+        },
       },
       interval: 4000,
       pauseOnHover: false,

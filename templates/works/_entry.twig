@@ -80,7 +80,7 @@
             <div class="work__body">      
             {% for worksContents in worksEntry.worksContents.all() %} 
                 <div class="work__body-wrapper">
-                    <div class="work__body-top">
+                   
                         {# 画像1枚の処理 #}
                         {% if worksContents.worksContentsImage1 is not empty %}
                             {% for media in worksContents.worksContentsImage1.all() %}
@@ -98,7 +98,7 @@
                             {% endif %}
                             {% endfor %}
                         {% endif %}
-                    </div>
+            
 
                     {# スライド画像の処理 #}
                     {% if worksContents.worksSlideImages is not empty and worksContents.worksSlideImages.all()|length > 0 %}
