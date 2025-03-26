@@ -13,9 +13,19 @@ body {
       padding-bottom: 6rem;
     }
   }
+  .work__hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @media (max-width: 960px) {
+      object-fit: cover;
+      object-position: left top;
+    }
+  }
   .work__hero-img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     @media (max-width: 960px) {
       height: 40rem;
       object-fit: cover;
@@ -126,11 +136,17 @@ body {
   align-items: center;
   justify-content: center;
   margin-inline: auto;
+  @media (max-width: 960px) {
+    padding-inline: 1.8rem;
+  }
   .work__body-top {
     display: flex;
     flex-direction: column;
     margin-inline: auto;
     margin-bottom: 6rem;
+    @media (max-width: 960px) {
+      margin-bottom: 3rem;
+    }
   }
   .work__body-top--video {
     width: 57rem;
@@ -138,12 +154,24 @@ body {
     display: block;
     object-fit: cover;
     margin-inline: auto;
+    @media (max-width: 960px) {
+      width: 100%;
+    }
   }
   .work__body-top-picture {
     display: flex;
     flex-direction: column;
     object-fit: cover;
     margin-inline: auto;
+    @media (max-width: 960px) {
+      align-items: center;
+    }
+    .work__body-top-img {
+      @media (max-width: 960px) {
+        width: 100%;
+        padding-inline: 1.8rem;
+      }
+    }
   }
   .splide {
     width: 100%;
@@ -185,12 +213,18 @@ body {
   justify-content: end;
   margin-inline: auto;
   padding-block: 6rem 16rem;
+  @media (max-width: 960px) {
+    width: 100vw;
+    padding-block: 3rem 12rem;
+    padding-inline: 1.8rem;
+    margin-inline: 0;
+  }
   .next-page {
     width: 20.6rem;
     height: 14.6rem;
     display: block;
     position: relative;
-    .next-page__img {
+    .next-page__link__sub__img {
       width: 100%;
       height: 100%;
       display: block;
@@ -216,27 +250,35 @@ body {
     border-bottom: 1px solid #1c1c1c;
     padding-bottom: 0.3rem;
     margin-bottom: 1.8rem;
+    @media (max-width: 960px) {
+      margin-bottom: 1rem;
+    }
   }
-  img {
+  .next-page__arrow {
     width: 1.6rem;
   }
 }
 .next-page__link {
   position: relative;
-  img {
+  .next-page__link__img {
     width: 100%;
+    object-fit: cover;
     transition: opacity 0.3s ease;
+    @media (max-width: 960px) {
+      height: 40rem;
+    }
   }
-  img:hover {
+  .next-page__link__img:hover {
     opacity: 0.7;
   }
   .next-page__nav {
     width: 13rem;
-    top: 50%;
-    right: 16rem;
-    transform: translateY(-50%);
-    img {
-      width: 1.6rem;
+    top: 41%;
+    right: 18%;
+    @media (max-width: 960px) {
+      /* width: 8rem; */
+      top: 65%;
+      left: 10%;
     }
   }
 }

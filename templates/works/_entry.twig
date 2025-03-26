@@ -34,7 +34,7 @@
                      {% for media in worksEntry.worksTopImage.all() %}
                         {% if media.kind == 'video' %}
                             {# 動画の場合 #}
-                            <video class="work__hero-img" autoplay loop muted playsinline>
+                            <video class="work__hero-video" autoplay loop muted playsinline>
                                 <source src="{{ media.getUrl() }}" type="video/mp4">
                             </video>
                         {% else %}
@@ -157,15 +157,13 @@
                             {% if displayEntry.nextEntryImage is not empty %}
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img class="next-page__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img class="next-page__link__sub__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             {% endif %}
                             <div class="next-page__nav">
-                                <h2 class="next-page__link__sub__title">Next</h2>
-                                {% for line in displayEntry.title | split('|') %}
-                                    {{ line }}{% if not loop.last %}<br>{% endif %}
-                                {% endfor %}
-                                <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                                <p class="next-page__link__sub__title">Next</p>
+                                <h2>{{ worksEntry.title | replace('|', ' ') }}</h2>
+                                <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
                     </div>
@@ -178,15 +176,15 @@
                 {% if displayEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="next-page__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="next-page__link__img" src="{{ displayEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">
-                    <h2 class="next-page__link__sub__title">Next</h2>
-                    {% for line in displayEntry.title | split('|') %}
-                        {{ line }}{% if not loop.last %}<br>{% endif %}
-                    {% endfor %}
-                    <img src="/images/next-page__arrow.svg" alt="nextページへ">
+                    <p class="next-page__link__sub__title">Next</p>
+                    {% if displayEntry.title is not empty %}
+                    <h2>{{ worksEntry.title | replace('|', ' ') }}</h2>
+                    {% endif %}
+                    <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                 </div>
             </a>
         </section>  

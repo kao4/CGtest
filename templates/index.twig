@@ -140,13 +140,11 @@
                         <a href="{{ nextEntry.url }}" class="next-page">
                                 <picture>
                                     <source media="(max-width: 960px)" srcset="" type="image/webp">
-                                    <img class="next-page__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
+                                    <img class="next-page__link__sub__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="330" height="234" alt="">
                                 </picture>
                             <div class="next-page__nav">
-                                <h2 class="next-page__link__sub__title">Next</h2>
-                                {% for line in nextEntry.title | split('|') %}
-                                    {{ line }}{% if not loop.last %}<br>{% endif %}
-                                {% endfor %}
+                                <p class="next-page__link__sub__title">Next</p>
+                                <h2>{{ worksEntry.title | replace('|', ' ') }}</h2>
                                 <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                             </div>
                         </a>
@@ -160,14 +158,12 @@
                 {% if nextEntry.nextEntryImage is not empty %}
                     <picture>
                         <source media="(max-width: 960px)" srcset="" type="image/webp">
-                        <img class="next-page__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
+                        <img class="next-page__link__img" src="{{ nextEntry.nextEntryImage.one().getUrl() }}" width="1440" height="1024" alt="">
                     </picture>
                 {% endif %}
                 <div class="next-page__nav">
-                    <h2 class="next-page__link__sub__title">Next</h2>
-                    {% for line in nextEntry.title | split('|') %}
-                        {{ line }}{% if not loop.last %}<br>{% endif %}
-                    {% endfor %}
+                    <p class="next-page__link__sub__title">Next</p>
+                    <h2>{{ worksEntry.title | replace('|', ' ') }}</h2>
                     <img class="next-page__arrow" src="/images/next-page__arrow.svg" alt="nextページへ">
                 </div>
             </a>
