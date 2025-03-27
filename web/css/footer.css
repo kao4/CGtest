@@ -1,0 +1,59 @@
+#footer {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #e8e8e3;
+  line-height: 1.8;
+  letter-spacing: 36%;
+  background: #2d2d2b;
+}
+.footer__wrapper {
+  padding: 9rem 7.5rem 3rem;
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8.75rem;
+}
+.footer__philosophy-title {
+  font-size: 3rem;
+  line-height: 1.2;
+  padding-bottom: 1.87rem;
+  margin-left: 8.75rem;
+}
+.footer__philosophy {
+  display: block;
+  .footer__philosophy-text {
+    width: 13rem;
+  }
+}
+.footer__site-nav {
+  width: 14.6rem;
+  display: block;
+  padding-bottom: 8rem;
+  .footer__site-list {
+    font-weight: 700;
+    line-height: 2.2;
+    padding-bottom: 1.75rem;
+  }
+  .footer__social-policy-list {
+    line-height: 2;
+    letter-spacing: 12%;
+  }
+}
+.footer__company {
+  display: flex;
+  justify-content: space-between;
+  address {
+    width: 14.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-left: 1.6rem;
+    padding-bottom: 1.55rem;
+  }
+}
+small {
+  margin-left: 8.75rem;
+}
