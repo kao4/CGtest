@@ -10,6 +10,7 @@
 }
 .footer__wrapper {
   display: flex;
+  justify-content: space-between;
   padding: 9rem 7.5rem 3rem;
   @media (max-width: 960px) {
     padding: 6rem 3.6rem 3rem;
