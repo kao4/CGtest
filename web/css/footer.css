@@ -10,9 +10,9 @@
 }
 .footer__wrapper {
   padding: 9rem 7.5rem 3rem;
-  @media (max-width: 960px) {
+  /* @media (max-width: 960px) {
     padding: 6rem 4rem 3rem;
-  }
+  } */
   @media (max-width: 768px) {
     padding: 6rem 3rem 3rem;
   }
@@ -21,8 +21,7 @@
   display: flex;
   justify-content: space-between;
   margin-left: 8.75rem;
-  @media (max-width: 960px) {
-  }
+
   @media (max-width: 768px) {
     flex-direction: column;
     margin-left: 0;
@@ -33,9 +32,8 @@
   line-height: 1.2;
   padding-bottom: 1.87rem;
   margin-left: 8.75rem;
-  @media (max-width: 960px) {
-  }
   @media (max-width: 768px) {
+    font-size: 2rem;
     padding-bottom: 1.3rem;
     margin-left: 0;
   }
@@ -43,8 +41,7 @@
 .footer__philosophy {
   width: 13rem;
   display: block;
-  @media (max-width: 960px) {
-  }
+
   @media (max-width: 768px) {
     width: 100%;
     margin-bottom: 3rem;
@@ -55,8 +52,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 8rem;
-  @media (max-width: 960px) {
-  }
+
   @media (max-width: 768px) {
     padding-bottom: 3rem;
   }
@@ -72,26 +68,25 @@
 }
 .footer__company {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 1440px) {
-    flex-direction: column;
-    padding-inline: 0 auto;
-  }
   @media (max-width: 768px) {
+    flex-direction: column-reverse;
   }
   .footer__company-logo {
-    width: 100%;
-    @media (max-width: 1440px) {
-      width: 100%;
-      order: 2;
-      margin-inline: auto 0;
-    }
+    width: 58rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 1.6rem !important;
     @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
     }
     .footer__company-logo-img {
-      @media (max-width: 1440px) {
-      }
+      width: 100%;
     }
   }
   address {
@@ -100,16 +95,12 @@
     flex-direction: column;
     justify-content: end;
     padding-bottom: 1.55rem;
-    @media (max-width: 960px) {
-    }
+
     @media (max-width: 768px) {
-      order: 1;
       margin-inline: 0 auto;
       padding-bottom: 1rem;
     }
     br {
-      @media (max-width: 960px) {
-      }
       @media (max-width: 768px) {
         display: none;
       }
@@ -119,8 +110,7 @@
 small {
   margin-left: 8.75rem;
   line-height: 1.5;
-  @media (max-width: 960px) {
-  }
+
   @media (max-width: 768px) {
     margin: 0 auto;
   }
