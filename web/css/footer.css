@@ -10,28 +10,56 @@
 }
 .footer__wrapper {
   padding: 9rem 7.5rem 3rem;
+  @media (max-width: 960px) {
+    padding: 6rem 4rem 3rem;
+  }
+  @media (max-width: 768px) {
+    padding: 6rem 3rem 3rem;
+  }
 }
 .footer__nav {
   display: flex;
   justify-content: space-between;
   margin-left: 8.75rem;
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-left: 0;
+  }
 }
 .footer__philosophy-title {
   font-size: 3rem;
   line-height: 1.2;
   padding-bottom: 1.87rem;
   margin-left: 8.75rem;
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 1.3rem;
+    margin-left: 0;
+  }
 }
 .footer__philosophy {
+  width: 13rem;
   display: block;
-  .footer__philosophy-text {
-    width: 13rem;
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 3rem;
   }
 }
 .footer__site-nav {
   width: 14.6rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 8rem;
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 3rem;
+  }
   .footer__site-list {
     font-weight: 700;
     line-height: 2.2;
@@ -43,17 +71,57 @@
   }
 }
 .footer__company {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1440px) {
+    flex-direction: column;
+    padding-inline: 0 auto;
+  }
+  @media (max-width: 768px) {
+  }
+  .footer__company-logo {
+    width: 100%;
+    @media (max-width: 1440px) {
+      width: 100%;
+      order: 2;
+      margin-inline: auto 0;
+    }
+    @media (max-width: 768px) {
+    }
+    .footer__company-logo-img {
+      @media (max-width: 1440px) {
+      }
+    }
+  }
   address {
     width: 14.6rem;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-left: 1.6rem;
     padding-bottom: 1.55rem;
+    @media (max-width: 960px) {
+    }
+    @media (max-width: 768px) {
+      order: 1;
+      margin-inline: 0 auto;
+      padding-bottom: 1rem;
+    }
+    br {
+      @media (max-width: 960px) {
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
   }
 }
 small {
   margin-left: 8.75rem;
+  line-height: 1.5;
+  @media (max-width: 960px) {
+  }
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
 }
