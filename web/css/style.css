@@ -9,16 +9,9 @@ body {
 .work__hero {
   .work__hero-wrapper {
     padding-bottom: 9rem;
+    position: relative;
     @media (max-width: 960px) {
       padding-bottom: 6rem;
-    }
-  }
-  .work__hero-video {
-    width: 100%;
-    object-fit: cover;
-    @media (max-width: 960px) {
-      height: 40rem;
-      object-position: left top;
     }
   }
   .work__hero-img {
@@ -26,6 +19,19 @@ body {
     object-fit: cover;
     @media (max-width: 960px) {
       height: 40rem;
+    }
+  }
+  .work__hero-video {
+    width: 70%;
+    height: auto;
+    border-radius: 1.8rem;
+    border: 8px solid #202020;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -58%);
+    @media (max-width: 768px) {
+      width: 90%;
     }
   }
 }

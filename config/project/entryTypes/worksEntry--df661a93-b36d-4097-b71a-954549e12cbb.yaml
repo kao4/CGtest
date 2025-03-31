@@ -28,11 +28,27 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-03-31T02:25:03+00:00'
+            elementCondition: null
+            fieldUid: b97dbb57-13da-4446-9e2a-2165bd9a9560 # worksTOP動画
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f7ddf1fe-e738-4eb1-8182-f25f3bbf0e8e
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-17T04:05:44+00:00'
+            dateAdded: '2025-03-31T00:57:17+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -53,7 +69,23 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 960f2323-913e-4f23-88c7-9dc3ae1bee89
+            uid: 72db910e-4f53-4c8d-8219-74a498d770f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-31T00:55:06+00:00'
+            elementCondition: null
+            fieldUid: 55477f9c-78c5-4f68-a070-de2d8ad473ab # worksタイトル
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba0c82f9-30d7-4fbc-bc3e-d984926de7a1
             userCondition: null
             warning: null
             width: 100
@@ -166,22 +198,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 2a516c28-ca34-4ada-95de-3d4c7841e925
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-26T03:20:07+00:00'
-            elementCondition: null
-            fieldUid: d09f309d-4d51-44b3-ae09-edfffbc7a776
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 817435ef-1be5-4ee8-8611-a9261f1bcb02
             userCondition: null
             warning: null
             width: 100
