@@ -190,12 +190,15 @@ body {
       flex-wrap: nowrap;
     }
     .splide__slide {
-      display: block;
-      width: 100%;
+      display: flex;
+      justify-content: center;
+      width: auto !important;
+      flex-shrink: 0;
       opacity: 1 !important;
       visibility: visible !important;
       img {
-        width: 100%;
+        width: auto;
+        height: 40.5rem;
         object-fit: contain;
         @media (max-width: 960px) {
           height: 33.5rem;
