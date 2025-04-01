@@ -48,6 +48,15 @@
   .footer__nav__philosophy {
     width: 13rem;
   }
+  .footer__site-nav {
+    a {
+      transition: text-shadow 0.3s ease;
+      position: relative;
+    }
+    a:hover {
+      text-shadow: 0 0 0.6rem white;
+    }
+  }
   .footer__site-list {
     width: 5.5rem;
     font-weight: 700;
@@ -88,6 +97,13 @@
     @media (max-width: 768px) {
       margin-inline: 0 auto;
       padding-bottom: 1rem;
+    }
+    .address__mail {
+      transition: text-shadow 0.3s ease;
+      position: relative;
+    }
+    .address__mail:hover {
+      text-shadow: 0 0 0.6rem white;
     }
   }
   small {
