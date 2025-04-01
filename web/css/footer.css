@@ -5,110 +5,97 @@
   font-weight: 400;
   color: #e8e8e3;
   line-height: 1.8;
-  /* letter-spacing: 36%; */
+  letter-spacing: 36%;
   background: #2d2d2b;
-  @media (max-width: 913px) {
-    font-size: 0.68rem;
+  .footer__wrapper {
+    padding: 9rem 7.5rem 3rem;
+    @media (max-width: 960px) {
+      padding: 6rem 6rem 3rem;
+    }
+    @media (max-width: 768px) {
+      padding: 6rem 1.8rem 3rem;
+    }
   }
-  @media (max-width: 768px) {
-    font-size: 0.625rem;
-  }
-}
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 9rem 7.5rem 3rem;
-  @media (max-width: 960px) {
-    padding: 6rem 3.6rem 3rem;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 6rem 1.8rem 3rem;
-    position: relative;
-  }
-}
-.footer__philosophy {
-  display: block;
-  margin-left: 8.75rem;
-  margin-bottom: 10.8rem;
-  @media (max-width: 1180px) {
-    margin-left: 0;
-  }
-  @media (max-width: 768px) {
-    margin-left: 0;
-    margin-bottom: 3rem;
-  }
-}
-.footer__philosophy-title {
-  font-size: 3rem;
-  line-height: 1.2;
-  padding-bottom: 1.87rem;
-  @media (max-width: 913px) {
-    font-size: 2.7rem;
-  }
-  @media (max-width: 768px) {
-    font-size: 2.6rem;
-  }
-}
-.footer__philosophy-text {
-  width: 13rem;
-}
-.footer__company {
-  @media (max-width: 768px) {
-    width: 100%;
+  .footer__main {
     display: flex;
     flex-direction: column;
-    padding-inline: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
   }
-}
-.footer__nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 1.6rem;
-  @media (max-width: 1050px) {
-    margin-left: 0.4rem;
+  .footer__title {
+    font-size: 3rem;
+    line-height: 1.2;
+    padding-left: 8.75rem;
+    padding-bottom: 1.87rem;
+    @media (max-width: 960px) {
+      padding-left: 0;
+      padding-bottom: 3rem;
+    }
   }
-  @media (max-width: 768px) {
-    margin-left: 0;
-    padding-bottom: 5rem;
+  .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 8.75rem 9.2rem;
+    margin-bottom: 8rem;
+    @media (max-width: 960px) {
+      padding-inline: 0 6rem;
+      margin-bottom: 4rem;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding-inline: 0;
+      gap: 3rem;
+    }
   }
-  @media (max-width: 500px) {
-    padding-bottom: 2rem;
-  }
-}
-.footer__site-nav {
-  padding-top: 5.4rem;
-  @media (max-width: 768px) {
-    padding-block: 0rem 3rem;
+  .footer__nav__philosophy {
+    width: 13rem;
   }
   .footer__site-list {
+    width: 5.5rem;
     font-weight: 700;
     line-height: 2.2;
     padding-bottom: 1.75rem;
+    @media (max-width: 960px) {
+      padding-bottom: 3rem;
+    }
+    @media (max-width: 768px) {
+      line-height: 2.5;
+    }
   }
   .footer__social-policy-list {
     line-height: 2;
-    /* letter-spacing: 12%; */
+    letter-spacing: 12%;
+    @media (max-width: 768px) {
+      line-height: 2.2;
+    }
   }
-}
-address {
-  padding-bottom: 3rem;
-  @media (max-width: 960px) {
-    padding-bottom: 2.4rem;
+  .footer__company {
+    width: 100%;
+    display: flex;
+    @media (max-width: 960px) {
+      flex-direction: column-reverse;
+    }
   }
-  @media (max-width: 768px) {
+  address {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    padding-left: 1.6rem;
+    @media (max-width: 960px) {
+      padding-block: 0 0.5rem;
+      padding-inline: 0 2rem;
+      margin-inline: auto 0;
+    }
+    @media (max-width: 768px) {
+      margin-inline: 0 auto;
+      padding-bottom: 1rem;
+    }
   }
-}
-small {
-  margin-left: 8.75rem;
-  line-height: 1.5;
-  @media (max-width: 768px) {
-    margin: 0 auto;
-    transform: translate(-70%, 0%);
+  small {
+    display: block;
+    margin-left: 8.75rem;
+    line-height: 1.5;
+    @media (max-width: 960px) {
+      margin-left: 0;
+    }
   }
 }
