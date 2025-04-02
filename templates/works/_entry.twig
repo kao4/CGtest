@@ -25,18 +25,18 @@
     {% else %}
         {# 次のエントリがない場合（最後のエントリの場合）は最初のエントリを表示 #}
         {% set displayEntry = firstEntry %}
-        {% set linkUrl = '/' %}
+        {% set linkUrl = firstEntry.url  %}
     {% endif %}
 
     {% if worksEntry %} 
-         <section class="work__hero"> 
+        <section class="work__hero"> 
             <div class="work__hero-wrapper">
                 <picture class="work__hero-top-picture">
                     <source media="(max-width: 960px)" srcset="" type="image/webp">
                     <img class="work__hero-img" src="{{ worksEntry.worksTopImage.one().getUrl() }}" width="1440" height="1024" alt="">
                 </picture>
                 {% if worksEntry.worksTopVideo is not empty %}
-                    <video class="works__hero-video" autoplay loop muted playsinline>
+                    <video class="work__hero-video" autoplay loop muted playsinline>
                         <source src="{{ worksEntry.worksTopVideo.one().getUrl() }}" type="video/mp4">
                     </video>
                 {% endif %}

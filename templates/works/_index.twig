@@ -1,0 +1,43 @@
+{% extends '_layout' %}
+
+{% block content %}
+    {% if entry is defined %}
+        {# 詳細ページの表示 #}
+        {% include "works/_entry" %}
+    {% else %}
+        {# Works一覧ページの表示 #}
+        {% set works = craft.entries()
+            .section('WorksEntry')
+            .type('worksEntry')
+            .all() %}
+
+        <section class="works-list">
+            <div class="works-list__inner">
+                {% if works|length %}
+                    <ul class="works-list__items">
+                        {% for work in works %}
+                            <li class="works-list__item">
+                                <a href="{{ work.url }}" class="works-list__link">
+                                    {% if work.worksTopImage.one() %}
+                                        <picture>
+                                            <source media="(max-width: 960px)" srcset="" type="image/webp">
+                                            <img class="works-list__img" 
+                                                 src="{{ work.worksTopImage.one().getUrl() }}" 
+                                                 width="919" 
+                                                 height="695" 
+                                                 alt="{{ work.title }}">
+                                        </picture>
+                                    {% endif %}
+                                    <div class="works-list__content">
+                                        <h2 class="works-list__title">{{ work.worksTitle }}</h2>
+                                        <p class="works-list__summary">{{ work.worksSummary }}</p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

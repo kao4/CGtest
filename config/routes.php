@@ -9,4 +9,7 @@
  * https://craftcms.com/docs/4.x/routing.html
  */
 
-return [];
+return [
+    'works' => ['template' => 'works/_index'],
+    'works/<slug:{slug}>' => ['template' => 'works/_index'],
+];
