@@ -78,8 +78,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-inline: 4rem;
     @media (max-width: 768px) {
       width: 100%;
+      padding-inline: 0;
     }
     .header__company-logo-img {
       width: 100%;
@@ -87,28 +89,34 @@
     }
   }
   nav {
-    width: 15rem;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    margin: auto;
     @media (max-width: 768px) {
+      width: 100%;
+      height: auto;
       gap: 3rem;
+      margin: auto;
+      padding-bottom: 5rem;
     }
   }
   .header__site-list,
   .footer__social-policy-list {
+    width: 15rem;
     display: flex;
     flex-direction: column;
     padding-left: 4rem;
     @media (max-width: 768px) {
       text-align: center;
+      padding-left: 0;
     }
   }
   .header__site-list {
     display: block;
     font-size: 2rem;
     line-height: 2.5;
+    margin: auto auto 0;
     @media (max-width: 768px) {
       font-size: 1.5rem;
     }
@@ -123,6 +131,7 @@
     display: block;
     font-size: 1.5rem;
     line-height: 2.3;
+    margin: 0 auto auto;
     @media (max-width: 768px) {
       font-size: 1.2rem;
       line-height: 2;
