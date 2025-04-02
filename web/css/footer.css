@@ -54,7 +54,7 @@
       position: relative;
     }
     a:hover {
-      text-shadow: 0 0 0.6rem white;
+      text-shadow: 0 0 0.6rem #fff;
     }
   }
   .footer__site-list {
@@ -103,7 +103,7 @@
       position: relative;
     }
     .address__mail:hover {
-      text-shadow: 0 0 0.6rem white;
+      text-shadow: 0 0 0.6rem #fff;
     }
   }
   small {
