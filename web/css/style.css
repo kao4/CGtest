@@ -194,8 +194,8 @@ body {
       justify-content: center;
       width: auto !important;
       flex-shrink: 0;
-      opacity: 1 !important;
-      visibility: visible !important;
+      opacity: 1;
+      visibility: visible;
       img {
         width: auto;
         height: 40.5rem;
