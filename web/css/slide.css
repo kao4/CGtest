@@ -1,0 +1,45 @@
+.splide {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-block: 6rem;
+  @media (max-width: 960px) {
+    height: 33.5rem;
+    margin-block: 3rem;
+  }
+  @media (max-width: 768px) {
+    margin-block: 2rem;
+  }
+  .splide__track {
+    overflow: hidden;
+  }
+  .splide__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+    width: auto !important;
+    flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
+    img {
+      width: auto;
+      height: 40.5rem;
+      object-fit: contain;
+      @media (max-width: 960px) {
+        height: 33.5rem;
+      }
+    }
+  }
+}
+/* スライド画像のフェード防止 */
+.work__slide {
+  transition: none; /* 要素のアニメーションや遷移を無効化 */
+  will-change: transform; /* プロパティの変更があることをブラウザに事前通知 */
+  transform: translateZ(
+    0
+  ); /* 要素のZ軸を0に移動させる→画面のカクつきを防ぎ、スムーズな描画 */
+  -webkit-transform: translateZ(0);
+}
