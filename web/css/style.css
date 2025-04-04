@@ -203,6 +203,7 @@
     .works__detail__description {
       p {
         letter-spacing: 2%;
+        margin-top: 1.2rem;
       }
     }
   }
