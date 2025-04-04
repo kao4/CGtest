@@ -5,9 +5,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding-inline: 8vw;
-    position: absolute;
+    /* padding-inline: 8vw; */
+    position: fixed;
     top: 5.3vh;
+    left: 8vw;
     z-index: 10;
   }
 
@@ -21,7 +22,9 @@
     display: block;
     width: 1.5rem;
     height: 0.5rem;
-    position: relative;
+    position: fixed;
+    top: 5.3vh;
+    right: 8vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,7 +76,7 @@
       flex-direction: column-reverse;
     }
   }
-  .footer__company-logo {
+  .header__company-logo {
     width: 50%;
     display: flex;
     justify-content: center;
@@ -102,7 +105,7 @@
     }
   }
   .header__site-list,
-  .footer__social-policy-list {
+  .header__social-policy-list {
     width: 15rem;
     display: flex;
     flex-direction: column;
@@ -127,7 +130,7 @@
       text-shadow: 0 0 0.6rem #fff;
     }
   }
-  .footer__social-policy-list {
+  .header__social-policy-list {
     display: block;
     font-size: 1.5rem;
     line-height: 2.3;
@@ -136,7 +139,7 @@
       font-size: 1.2rem;
       line-height: 2;
     }
-    .footer__social-policy-item {
+    .header__social-policy-item {
       display: inline-flex;
       gap: 0.2rem;
       transition: text-shadow 0.3s ease;
@@ -147,7 +150,7 @@
         }
       }
     }
-    .footer__social-policy-item:hover {
+    .header__social-policy-item:hover {
       text-shadow: 0 0 0.6rem #fff;
     }
   }
