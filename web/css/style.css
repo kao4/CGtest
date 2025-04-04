@@ -94,5 +94,9 @@
     margin-inline: auto 7.5rem;
     margin-top: -9.5rem;
     position: relative;
+    .fv__next-section__small-img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
