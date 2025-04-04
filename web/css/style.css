@@ -155,9 +155,6 @@
         font-weight: 700;
         line-height: 1.2;
       }
-      .arrow {
-        transform: rotate(-90deg);
-      }
     }
   }
 }
@@ -185,7 +182,7 @@
       margin-top: auto;
     }
     .works__detail__link {
-      width: 211px;
+      width: 13rem;
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
@@ -196,7 +193,6 @@
         line-height: 1.2;
       }
       .arrow {
-        transform: rotate(-90deg);
         filter: invert(1);
       }
     }
@@ -205,6 +201,50 @@
         letter-spacing: 2%;
         margin-top: 1.2rem;
       }
+    }
+  }
+}
+.contact {
+  .contact__wrapper {
+    padding: 150px 260px;
+    position: relative;
+  }
+  .contact__info__en {
+    width: 500px;
+    font-size: 3rem;
+    line-height: 1.3;
+    position: absolute;
+    top: 200px;
+    right: 260px;
+  }
+  .contact__info__wrapper {
+    width: 329px;
+    display: flex;
+    margin-inline: auto 0;
+    margin-block: -48px 50px;
+  }
+  .contact__link__wrapper {
+    width: 329px;
+    display: block;
+    margin-inline: auto 0;
+    .contact__link__title {
+      font-size: 3rem;
+      line-height: 1.3;
+      padding-bottom: 35px;
+      position: relative;
+    }
+    .contact__link__title::before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 212px;
+      height: 1px;
+      background: #1c1c1c;
+      top: 70px;
+    }
+    .contact__link {
+      display: flex;
+      flex-direction: column;
     }
   }
 }
