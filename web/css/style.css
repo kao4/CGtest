@@ -94,9 +94,34 @@
     margin-inline: auto 7.5rem;
     margin-top: -9.5rem;
     position: relative;
+    z-index: 1;
     .fv__next-section__small-img {
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+.hero {
+  width: 100%;
+  .hero__wrapper {
+    width: 100%;
+    height: 810px;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .arrow {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translateX(50%);
+      z-index: 1;
     }
   }
 }
