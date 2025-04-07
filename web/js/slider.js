@@ -1,6 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // すべてのスライダーを取得
-  document.querySelectorAll(".splide").forEach(function (element) {
+  TOPページのスライダー;
+  document.querySelectorAll(".top__slider").forEach(function (element) {
+    new Splide(element, {
+      type: "loop",
+      perPage: 3,
+      perMove: 1,
+      start: 0,
+      arrows: true,
+      pagination: false,
+      autoplay: true,
+      speed: 800,
+      breakpoints: {
+        960: {
+          perPage: 2,
+        },
+        768: {
+          perPage: 1.5,
+        },
+        500: {
+          perPage: 1.2,
+        },
+      },
+      interval: 3000,
+      pauseOnHover: true,
+      pauseOnFocus: true,
+    }).mount();
+  });
+
+  // works詳細ページのスライダー
+  document.querySelectorAll(".works__slide.splide").forEach(function (element) {
     new Splide(element, {
       type: "loop",
       perPage: 3,
