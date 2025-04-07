@@ -1,4 +1,4 @@
-dateModified: 1743390473
+dateModified: 1744007766
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
@@ -29,12 +29,46 @@ meta:
     ae3c0b97-597c-4f6a-8edc-57c2dd41e5ce: worksエージェント # worksエージェント
     b97dbb57-13da-4446-9e2a-2165bd9a9560: worksTOP動画 # worksTOP動画
     bffa93b7-d62e-412f-be4a-661c30b74b33: CGtest # CGtest
+    c47cc52d-218b-4986-8e5a-3d5250923d10: ' SEO' #  SEO
     cc29658c-c25a-4148-9c08-e722eb9a1c7b: 'Works - Index' # Works - Index
     dab1d1ad-6698-4403-a8d7-5eab5fc3ea28: works概要 # works概要
     df661a93-b36d-4097-b71a-954549e12cbb: 'Works Entry' # Works Entry
     e1547157-8cce-47ee-ad7b-ecafd023889a: CGtest # CGtest
     f42b1497-cd88-4002-9a50-77a35f41cc0e: worksコンテンツ # worksコンテンツ
     fa22373c-b2cb-4021-aaad-b1655ebe3179: worksスライド画像 # worksスライド画像
+plugins:
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+    settings:
+      assetSourceSettings:
+        1:
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - imageWidth
+              - ''
+            -
+              - imageHeight
+              - ''
+            -
+              - imageQuality
+              - ''
+      enabled: true
+      imageHeight: 1024
+      imageQuality: 100
+      imageWidth: 1440
+      nonDestructiveCrop: false
+      nonDestructiveResize: false
+      skipLarger: true
+      useGlobalSettings: true
+  seo:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.2.0
 system:
   edition: solo
   live: true

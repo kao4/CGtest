@@ -89,11 +89,10 @@
                             {% endif %}
                             {% endfor %}
                         {% endif %}
-            
 
                     {# スライド画像の処理 #}
                     {% if worksContents.worksSlideImages is not empty and worksContents.worksSlideImages.all()|length > 0 %}
-                    <div class="splide" aria-label="works__slide">
+                    <div class="splide works__slide" aria-label="works__slide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 {% set slides = worksContents.worksSlideImages.all() %}

@@ -226,6 +226,28 @@ fieldLayouts:
         name: 自由コンテンツ
         uid: d0ddd100-7584-45ed-b793-5f297c2a5141
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-07T06:33:53+00:00'
+            elementCondition: null
+            fieldUid: c47cc52d-218b-4986-8e5a-3d5250923d10 #  SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c9db06cf-2936-4fdc-919b-967cba39a472
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 8ce4541e-527a-47c9-9f35-eec3a039a268
+        userCondition: null
 handle: worksEntry
 hasTitleField: true
 icon: null
