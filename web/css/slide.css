@@ -1,3 +1,56 @@
+/* TOPスライダー */
+.top__slider {
+  margin-bottom: 3rem;
+  .splide__list {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .splide__slide {
+    width: 28rem;
+    height: 25rem;
+    border-radius: 0.3rem;
+    overflow: hidden;
+  }
+  .works__slide__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+  }
+  .splide__works__space {
+    width: 13.25rem;
+    display: block;
+    position: absolute;
+    top: 1.8rem;
+    left: 1.8rem;
+    li {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 3%;
+    }
+  }
+  .splide__works__title {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 1.8rem;
+    left: 1.8rem;
+  }
+  .splide__arrow {
+    background: transparent;
+    svg {
+      fill: #fff;
+    }
+  }
+  /* .splide__arrow--prev {
+    left: 7.5rem;
+  }
+  .splide__arrow--next {
+    right: 7.5rem;
+  } */
+}
+
+/* worksスライダー */
 .works__slide {
   width: 100%;
   height: auto;

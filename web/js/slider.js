@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  TOPページのスライダー;
+  // TOPページのスライダー
   document.querySelectorAll(".top__slider").forEach(function (element) {
     new Splide(element, {
       type: "loop",
       perPage: 3,
       perMove: 1,
       start: 0,
-      arrows: true,
-      pagination: false,
+      arrows: true, // TOPページ用の設定
+      pagination: false, // TOPページ用の設定
       autoplay: true,
       speed: 800,
       breakpoints: {
