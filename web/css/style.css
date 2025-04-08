@@ -192,6 +192,11 @@
     flex-direction: column;
     gap: 0.6rem;
     margin-inline: auto;
+    a {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
     span {
       font-size: 0.9rem;
       font-weight: 700;
