@@ -162,7 +162,7 @@
     width: 100%;
     padding: 9.3rem 16.25rem;
     @media (max-width: 768px) {
-      padding: 3rem 1.8rem;
+      padding: 6rem 1.8rem;
     }
     .hero__company-overview__info__en {
       font-size: 3rem;
@@ -193,7 +193,7 @@
         letter-spacing: 2%;
         @media (max-width: 768px) {
           width: auto;
-          margin-bottom: 2rem;
+          margin-bottom: 3rem;
         }
       }
     }
@@ -232,27 +232,49 @@
   background: #1c1c1c;
   color: #fff;
   padding-top: 9.3rem;
+  @media (max-width: 768px) {
+    padding-top: 6rem;
+  }
 }
 .works__wrapper {
   width: 100%;
   padding: 0 9.3rem 16.25rem 9.3rem;
+  @media (max-width: 768px) {
+    padding: 0 1.8rem 6rem 1.8rem;
+  }
   .works__detail {
     width: 100%;
     height: 31.25rem;
     display: flex;
+    @media (max-width: 768px) {
+      height: auto;
+      flex-direction: column;
+    }
   }
   .works__title__wrapper {
     width: 50%;
     font-size: 3rem;
     line-height: 1.3;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 2rem;
+    }
     .works__title {
       width: 26rem;
       margin-inline: 0 auto;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-inline: 0;
+        margin-bottom: 2rem;
+      }
     }
   }
   .works__detail__link__wrapper {
     width: 50%;
     margin-top: auto;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   .works__detail__link {
     width: 13rem;
@@ -260,10 +282,19 @@
     flex-direction: column;
     gap: 0.6rem;
     margin-inline: auto;
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: column-reverse;
+      gap: 2rem;
+      margin-inline: 0;
+    }
     a {
       display: flex;
       flex-direction: column;
       gap: 0.6rem;
+      @media (max-width: 768px) {
+        transform: translateX(50%);
+      }
       span {
         font-size: 0.9rem;
         font-weight: 700;
