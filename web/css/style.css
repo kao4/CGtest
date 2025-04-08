@@ -146,10 +146,12 @@
     }
     .hero__services-link {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
       transform: translateX(50%);
+      a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
       span {
         font-size: 0.9rem;
         font-weight: 700;
