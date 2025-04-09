@@ -1,4 +1,7 @@
 #main {
+  width: 100%;
+  min-width: 100vw; /* 追加 */
+  overflow-x: hidden;
   color: #1c1c1c;
   font-family: Inter;
   font-size: 0.75rem;
@@ -18,6 +21,8 @@
     height: 53rem;
   }
   .fv__inner {
+    max-width: 90rem;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -89,7 +94,7 @@
     }
   }
   .fv__company-logo-img {
-    width: 100%;
+    width: 58.74rem;
     display: flex;
     img {
       width: 100%;
@@ -127,6 +132,9 @@
     margin-top: -9.5rem;
     position: relative;
     z-index: 1;
+    @media (min-width: 1440px) {
+      margin-inline: auto 25%;
+    }
     @media (max-width: 768px) {
       display: none;
     }
@@ -138,6 +146,8 @@
 }
 .hero {
   width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
   .hero__img__wrapper {
     width: 100%;
     height: 50.6rem;
@@ -238,6 +248,8 @@
 }
 .works__wrapper {
   width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
   padding: 0 9.3rem 16.25rem 9.3rem;
   @media (max-width: 768px) {
     padding: 0 1.8rem 6rem 1.8rem;
@@ -285,7 +297,7 @@
     @media (max-width: 768px) {
       width: 100%;
       flex-direction: column-reverse;
-      gap: 2rem;
+      gap: 0;
       margin-inline: 0;
     }
     a {
@@ -316,13 +328,26 @@
     p {
       letter-spacing: 2%;
       margin-top: 1.2rem;
+      @media (max-width: 768px) {
+        margin-block: 0 3rem;
+      }
     }
   }
 }
 .contact {
   .contact__wrapper {
+    max-width: 90rem;
+    margin-inline: auto;
     padding: 9.3rem 16rem;
     position: relative;
+    @media (max-width: 768px) {
+      padding: 6rem 1.8rem;
+    }
+  }
+  .contact__img {
+    @media (max-width: 768px) {
+      margin-bottom: 3rem;
+    }
   }
   .contact__info__en {
     width: 31rem;
@@ -331,22 +356,39 @@
     position: absolute;
     top: 12.5rem;
     right: 16rem;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 2rem;
+      position: static;
+      padding-bottom: 2rem;
+    }
   }
   .contact__info__wrapper {
     width: 20.5rem;
     display: flex;
     margin-inline: auto 0;
     margin-block: -3rem 3.1rem;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-inline: 0;
+      margin-block: 0 3rem;
+    }
   }
   .contact__link__wrapper {
     width: 20.5rem;
     display: block;
     margin-inline: auto 0;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
     .contact__link__title {
       font-size: 3rem;
       line-height: 1.3;
       padding-bottom: 2rem;
       position: relative;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
     .contact__link__title::before {
       display: block;
@@ -356,6 +398,10 @@
       height: 1px;
       background: #1c1c1c;
       top: 4.3rem;
+      @media (max-width: 768px) {
+        width: 8rem;
+        top: 3.5rem;
+      }
     }
     .contact__link {
       a {
