@@ -1,7 +1,11 @@
 #header {
-  width: 100%;
-  position: relative;
   .header__wrapper {
+    width: 100%;
+    max-width: 90rem;
+    margin-inline: auto;
+    position: relative;
+  }
+  .header__nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -10,7 +14,6 @@
     left: 8vw;
     z-index: 10;
   }
-
   /* hamburger */
   input[type="checkbox"] {
     opacity: 0;
