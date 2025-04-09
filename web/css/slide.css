@@ -19,7 +19,7 @@
   }
   .works__slide__img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     position: relative;
   }
@@ -42,7 +42,7 @@
   .splide__works__title {
     font-size: 1.3rem;
     position: absolute;
-    bottom: 1.8rem;
+    bottom: 8%;
     left: 1.8rem;
     @media (max-width: 768px) {
       font-size: 1rem;
