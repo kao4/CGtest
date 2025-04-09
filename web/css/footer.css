@@ -8,6 +8,8 @@
   letter-spacing: 36%;
   background: #2d2d2b;
   .footer__wrapper {
+    max-width: 90rem;
+    margin-inline: auto;
     padding: 9rem 7.5rem 3rem;
     @media (max-width: 960px) {
       padding: 6rem 6rem 3rem;
