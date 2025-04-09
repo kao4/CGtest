@@ -1,8 +1,16 @@
-dateModified: 1744007766
+dateModified: 1744161351
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
-  transportType: craft\mail\transportadapters\Sendmail
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $SMTP_HOST
+    password: ''
+    port: $SMTP_PORT
+    useAuthentication: '0'
+    username: ''
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   uploads:
     hasUrls: true
