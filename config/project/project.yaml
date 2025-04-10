@@ -1,4 +1,4 @@
-dateModified: 1744161351
+dateModified: 1744245546
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
@@ -45,6 +45,17 @@ meta:
     f42b1497-cd88-4002-9a50-77a35f41cc0e: worksコンテンツ # worksコンテンツ
     fa22373c-b2cb-4021-aaad-b1655ebe3179: worksスライド画像 # worksスライド画像
 plugins:
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      allowAttachments: '1'
+      allowedMessageFields: null
+      prependSender: 'On behalf of '
+      prependSubject: 'New message from CGtest'
+      successFlashMessage: メッセージが送信されました。
+      toEmail: kaori@cdgrph.com
   image-resizer:
     edition: standard
     enabled: true

@@ -3,6 +3,7 @@
   "prefer-stable": true,
   "require": {
     "craftcms/cms": "^5.0.0",
+    "craftcms/contact-form": "^3.1",
     "ether/seo": "5.0.0",
     "verbb/image-resizer": "4.0.3",
     "vlucas/phpdotenv": "^5.4.0"
