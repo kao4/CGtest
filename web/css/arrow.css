@@ -1,0 +1,21 @@
+.arrow-animation {
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  span {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .arrow {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0);
+  }
+  &:hover {
+    .arrow {
+      transform: translateX(2.5rem);
+    }
+  }
+}

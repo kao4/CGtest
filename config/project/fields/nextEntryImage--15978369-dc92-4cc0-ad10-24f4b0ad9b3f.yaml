@@ -5,7 +5,7 @@ name: nextエントリ画像
 searchable: false
 settings:
   allowSelfRelations: false
-  allowSubfolders: false
+  allowSubfolders: true
   allowUploads: true
   allowedKinds:
     - image
@@ -18,7 +18,7 @@ settings:
   previewMode: full
   restrictFiles: true
   restrictLocation: true
-  restrictedDefaultUploadSubpath: null
+  restrictedDefaultUploadSubpath: '{title}'
   restrictedLocationSource: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
   restrictedLocationSubpath: null
   selectionLabel: null

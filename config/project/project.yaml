@@ -1,4 +1,32 @@
-dateModified: 1744245546
+dateModified: 1744274618
+elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'volume:0ec3aa91-e4e8-4340-a06a-519f38ee7424' # Work
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+      type: native
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: temp
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+      type: native
 email:
   fromEmail: kaori@cdgrph.com
   fromName: CGtest
@@ -32,6 +60,7 @@ meta:
     841d9c3c-29dd-4cb7-a973-8717b1ebc051: worksリンク # worksリンク
     3172e165-5a99-41e4-876f-6b03fa7dbbf1: worksコンテンツ画像１枚 # worksコンテンツ画像１枚
     04546a57-f2f5-462c-93ad-04dba5962df5: works公開年 # works公開年
+    54963a6b-7027-4583-bf42-f15a3f2e6818: 'Public Schema' # Public Schema
     55477f9c-78c5-4f68-a070-de2d8ad473ab: worksタイトル # worksタイトル
     15978369-dc92-4cc0-ad10-24f4b0ad9b3f: nextエントリ画像 # nextエントリ画像
     ae3c0b97-597c-4f6a-8edc-57c2dd41e5ce: worksエージェント # worksエージェント
