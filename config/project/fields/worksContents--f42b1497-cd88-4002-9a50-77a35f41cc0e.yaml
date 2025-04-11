@@ -17,6 +17,11 @@ settings:
         -
           - uid
           - fa22373c-b2cb-4021-aaad-b1655ebe3179 # worksスライド画像
+    -
+      __assoc__:
+        -
+          - uid
+          - ba652aa8-926b-4d56-9c26-c11ad530a796
   includeTableView: false
   maxEntries: null
   minEntries: 1
